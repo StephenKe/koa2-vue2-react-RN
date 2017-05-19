@@ -7,6 +7,7 @@
 let koa = require('koa');
 let app = new koa();
 const convert = require('koa-convert');
+let promise = require('bluebird');
 
 app.use(convert(function *(next){
     var start = new Date;
