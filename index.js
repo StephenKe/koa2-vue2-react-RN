@@ -6,9 +6,11 @@
 // const babel = require('babel-register');
 let koa = require('koa');
 let app = new koa();
+let Mock = require('mockjs');
 const convert = require('koa-convert');
 // let promise = require('bluebird');
-console.log(__dirname);
+
+let data = Mock.mock('@email');
 
 app.use(convert(function *(next){
     var start = new Date;
@@ -30,7 +32,7 @@ app.use(convert(function *(next){
 // response
 
 app.use(convert(function *(){
-    this.body = 'Hello World';
+    this.body = data;
 }));
 
 app.listen(8002);
