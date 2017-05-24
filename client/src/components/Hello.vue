@@ -1,7 +1,7 @@
 <template>
   <div>
     <img src="../assets/logo.png" class="logo">
-    <button v-for="btn in btns" @click="getData(btn)">{{ btn }}</button>
+    <el-button type="primary" v-for="btn in btns" :key="btn" @click="getData(btn)">{{ btn }}</el-button>
     <div class="hello">
       <h1>{{ msg }}</h1>
       <h2>Essential Links</h2>

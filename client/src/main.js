@@ -3,9 +3,12 @@
 import Vue from 'vue'
 import router from './router'
 import VueResource from 'vue-resource'
+import elementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
 
 // console.log(Vue.http)
 Vue.use(VueResource)
+Vue.use(elementUI)
 
 Vue.config.productionTip = false
 
