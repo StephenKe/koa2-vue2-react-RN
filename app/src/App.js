@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
+import About from './component/About';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from './ui/Button'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
+          <h2>Stephen.K</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Button></Button>
+        <Router>
+          <div>
+            <ul>
+              <li><Link to="/about">About</Link></li>
+            </ul>
+
+            <hr/>
+
+            <Route path="/about" component={About}/>
+          </div>
+        </Router>
       </div>
     );
   }
