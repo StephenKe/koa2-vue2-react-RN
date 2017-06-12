@@ -22,3 +22,24 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.Nav-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  outline: none !important;
+}
+
+.Nav-icon .glyphicon {
+  color: #00A000;
+  font-size: 25px;
+}
+
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
