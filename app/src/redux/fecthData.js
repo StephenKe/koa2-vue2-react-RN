@@ -14,13 +14,11 @@ function router(state = 'initialData', action) {
                 cache: false,
                 success: function(data) {
                     if (data.readyState === 4) {
-                        console.log('suc:' + data.responseText);
                         state = data.responseText;
                     };
                 },
                 error: function(data) {
                     if (data.readyState === 4) {
-                        console.log('err:' + data.responseText);
                         state = data.responseText;
                     };
                 }
