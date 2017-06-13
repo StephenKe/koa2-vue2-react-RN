@@ -1,8 +1,7 @@
 import React from 'react';
-import http from '../redux/fecthData';
+import ajax from '../utils/ajax';
 
-http.dispatch({ type: '/api/email' });
-const email = http.getState();
+let email = ajax('/api/email');
 
 const Github = () => (
   <div>
