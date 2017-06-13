@@ -3,7 +3,7 @@
  */
 import { createStore } from 'redux';
 
-function matcher(state = 1, action) {
+function matcher(state, action) {
     switch (action.type) {
         case 1:
             return 1;

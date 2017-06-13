@@ -22,7 +22,7 @@ const RouteWithSubRoutes = (route) => (
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {show: false};
+        this.state = {show: false, email: 'test'};
 
         // This binding is necessary to make `this` work in the callback
         this.openModal = this.openModal.bind(this);
