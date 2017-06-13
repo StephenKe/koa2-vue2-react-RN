@@ -10,6 +10,10 @@ let mock = require('./mock_data');
 let app = new koa();
 let router = new Router();
 const convert = require('koa-convert');
+let cors = require('koa-cors');
+
+app.use(cors());
+
 // let promise = require('bluebird');
 
 // app.use(convert(function *(next){
