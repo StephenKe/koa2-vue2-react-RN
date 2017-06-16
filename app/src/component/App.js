@@ -15,7 +15,7 @@ import {
 } from 'react-router-dom';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import { zh_CN, en_US } from '../config/lang/lang';
-import storeData from '../redux/StoreData';
+import storeData from '../redux/langSwitch';
 
 const RouteWithSubRoutes = (route) => (
     <Route path={route.path} render={props => (

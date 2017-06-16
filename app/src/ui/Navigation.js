@@ -7,7 +7,6 @@ import '../css/Navigation.css';
 import { Link } from 'react-router-dom';
 import store from '../redux/Navigation';
 import { IntlProvider, FormattedMessage } from 'react-intl';
-import { zh_CN, en_US } from '../config/lang/lang'
 
 class Nav extends Component {
     constructor(props) {
