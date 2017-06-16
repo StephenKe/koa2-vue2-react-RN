@@ -43,3 +43,11 @@
 .modal-container .modal, .modal-container .modal-backdrop {
   position: absolute;
 }
+
+.App .App-header .Button button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  outline: none;
+  margin: 5px;
+}

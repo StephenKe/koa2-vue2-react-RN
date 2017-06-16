@@ -6,6 +6,8 @@ import { Nav as Nav1, NavItem } from 'react-bootstrap';
 import '../css/Navigation.css';
 import { Link } from 'react-router-dom';
 import store from '../redux/Navigation';
+import { IntlProvider, FormattedMessage } from 'react-intl';
+import { zh_CN, en_US } from '../config/lang/lang'
 
 class Nav extends Component {
     constructor(props) {
@@ -22,11 +24,31 @@ class Nav extends Component {
     };
     render () {
         return (
-            <Nav1 bsStyle="pills" stacked activeKey={this.state.atKey} onSelect={this.handleSelect} className="pills">
-                <NavItem eventKey={1}><Link to="/github">github</Link></NavItem>
-                <NavItem eventKey={2}><Link to="/jianshu">简书</Link></NavItem>
-                <NavItem eventKey={3}><Link to="/zhihu">知乎</Link></NavItem>
-            </Nav1>
+            <IntlProvider locale="en" messages={this.props.lang}>
+                <Nav1 bsStyle="pills" stacked activeKey={this.state.atKey} onSelect={this.handleSelect} className="pills">
+                    <NavItem eventKey={1}><Link to="/github">
+                        <FormattedMessage
+                            id='github'
+                            description='github'
+                            defaultMessage='no data'
+                        />
+                    </Link></NavItem>
+                    <NavItem eventKey={2}><Link to="/jianshu">
+                        <FormattedMessage
+                            id='jianshu'
+                            description='jianshu'
+                            defaultMessage='no data'
+                        />
+                    </Link></NavItem>
+                    <NavItem eventKey={3}><Link to="/zhihu">
+                        <FormattedMessage
+                            id='zhihu'
+                            description='zhihu'
+                            defaultMessage='no data'
+                        />
+                    </Link></NavItem>
+                </Nav1>
+            </IntlProvider>
         )
     }
 }
