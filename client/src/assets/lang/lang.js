@@ -4,7 +4,7 @@
 const messages = {
   en: {
     index: {
-      lang: 'English',
+      lang: '中文',
       me: 'About Me',
       job: 'Web Developer',
       home: 'Zhan Jiang'
@@ -12,7 +12,7 @@ const messages = {
   },
   zh: {
     index: {
-      lang: '中文',
+      lang: 'English',
       me: '关于站长',
       job: '前端开发',
       home: '家乡'

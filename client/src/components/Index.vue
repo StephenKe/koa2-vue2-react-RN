@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     langSwitch () {
-      window.sessionStorage.lang = this.$t('index.lang') === '中文' ? 'en' : 'zh'
+      window.sessionStorage.lang = this.$t('index.lang') === '中文' ? 'zh' : 'en'
       window.location.reload()
     }
   }
