@@ -1,12 +1,13 @@
 <template>
   <div>
-    <transition name="fade" appear="true">
-      <div v-if="ok" class="index" ref="modal"></div>
+    <transition name="fade">
+      <div v-if="ok" class="index"></div>
     </transition>
+    <el-button class="lang-switch" type="primary" @click="langSwitch">{{ $t("index.lang") }}</el-button>
     <img src="../assets/logo.png" class="logo">
-    <radiate-btn class="about-me"></radiate-btn>
-    <radiate-btn class="web-develop"></radiate-btn>
-    <radiate-btn class="zhan-jiang"></radiate-btn>
+    <radiate-btn class="about-me" :title="$t('index.me')"></radiate-btn>
+    <radiate-btn class="web-develop" :title="$t('index.job')"></radiate-btn>
+    <radiate-btn class="zhan-jiang" :title="$t('index.home')"></radiate-btn>
     <!--<el-button type="primary" v-for="btn in btns" :key="btn" @click="getData(btn)">{{ btn }}</el-button>-->
     <!--<div class="hello">-->
       <!--<h1>{{ msg }}</h1>-->
@@ -43,25 +44,12 @@ export default {
     }
   },
   mounted () {
-//    let _this = this
-//    window.setTimeout(() => {
-//      _this.$refs.modal.style.opacity = 0
-//    }, 0)
     this.ok = false
   },
   methods: {
-    getData (val) {
-      this
-        .$http.get(`/api/${val}`)
-        .then((res) => {
-          console.log('success')
-          console.log(res)
-          this.msg = res.data
-        })
-        .catch((err) => {
-          console.log('error')
-          console.log(err)
-        })
+    langSwitch () {
+      window.sessionStorage.lang = this.$t('index.lang') === '中文' ? 'en' : 'zh'
+      window.location.reload()
     }
   }
 }
@@ -123,5 +111,10 @@ a {
   position: absolute !important;
   left: 88%;
   top: 65%;
+}
+.lang-switch {
+  position: absolute;
+  top: 3%;
+  left: 75%;
 }
 </style>
