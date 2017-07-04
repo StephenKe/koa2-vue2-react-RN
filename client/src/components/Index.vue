@@ -6,7 +6,7 @@
     <el-button class="lang-switch" type="primary" @click="langSwitch">{{ $t("index.lang") }}</el-button>
     <img src="../assets/logo.png" class="logo">
     <radiate-btn class="about-me" :title="$t('index.me')"></radiate-btn>
-    <radiate-btn class="web-develop" :title="$t('index.job')"></radiate-btn>
+    <radiate-btn class="web-develop" :title="$t('index.job')" v-on:route="jumpTo('/web')"></radiate-btn>
     <radiate-btn class="zhan-jiang" :title="$t('index.home')"></radiate-btn>
     <!--<el-button type="primary" v-for="btn in btns" :key="btn" @click="getData(btn)">{{ btn }}</el-button>-->
     <!--<div class="hello">-->
@@ -50,6 +50,9 @@ export default {
     langSwitch () {
       window.sessionStorage.lang = this.$t('index.lang') === '中文' ? 'zh' : 'en'
       window.location.reload()
+    },
+    jumpTo (route) {
+      this.$router.replace({ path: route })
     }
   }
 }
@@ -100,7 +103,7 @@ a {
   /*transition: all 2s;*/
 }
 .fade-enter-active, .fade-leave-active {
-  transition: all 2s
+  transition: all 1s
 }
 .about-me {
   position: absolute !important;

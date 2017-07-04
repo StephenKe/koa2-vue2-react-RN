@@ -7,6 +7,7 @@
       width=""
       trigger="click"
       content="">
+      <div class="clickModal" @click="clickHandler()"></div>
       <i class="el-icon-caret-right"></i>
     </el-popover>
     <el-button class="btnModal" v-popover:popover></el-button>
@@ -21,17 +22,26 @@ export default {
     title: {
       type: String,
       default: 'err'
+    },
+    route: {
+      type: String,
+      default: 'err'
     }
   },
   mounted () {
     console.log(this.title)
+  },
+  methods: {
+    clickHandler () {
+      this.$emit('route')
+    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .btnModal {
+  .btnModal, .clickModal {
     width: 100%;
     height: 100%;
     background: transparent;

@@ -22,7 +22,6 @@ const i18n = new VueI18n({
   locale: window.sessionStorage.lang, // set locale
   messages: lang.messages // set locale messages
 })
-console.log('main: ' + window.lang)
 
 Vue.config.productionTip = false
 
@@ -31,10 +30,33 @@ new Vue({
   router,
   i18n,
   template: `<div>
+                <el-button v-show="pathName" type="primary" class="home" icon="close" @click="home"></el-button>
                 <transition name="fade">
                     <router-view class="view"></router-view>
                 </transition>
-            </div>`
+            </div>`,
+  data: {
+    pathName: true
+  },
+  watch: {
+    '$route' (val) {
+      if (val.path === '/') {
+        this.pathName = false
+        return
+      }
+      this.pathName = true
+    }
+  },
+  mounted () {
+    if (this.$route.path === '/') {
+      this.pathName = false
+    }
+  },
+  methods: {
+    home () {
+      this.$router.replace('/')
+    }
+  }
 }).$mount('#app')
 
 function langConfig (langs) {
