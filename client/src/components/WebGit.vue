@@ -25,6 +25,9 @@
       <el-collapse-item :title="$t('webGit.note')" name="8">
         <div>{{ $t('webGit.gitNote') }}</div>
       </el-collapse-item>
+      <el-collapse-item :title="$t('webGit.ignore')" name="9">
+        <div>{{ $t('webGit.gitIgnore') }}</div>
+      </el-collapse-item>
     </el-collapse>
   </div>
 </template>

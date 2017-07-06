@@ -10,10 +10,16 @@ const messages = {
       home: 'Zhan Jiang'
     },
     web: {
-      primary: 'Primary',
+      primary: {
+        label: 'Primary',
+        html: 'HTML',
+        css: 'CSS',
+        js: 'JavaScript'
+      },
       middle: {
         label: 'Mid-Level',
-        css: 'CSS'
+        css: 'CSS',
+        js: 'JavaScript'
       },
       high: {
         label: 'High-Lever',
@@ -30,13 +36,18 @@ const messages = {
           vueResource: 'vue-resource'
         },
         angular: 'Angular',
-        elementUI: 'ElementUI'
+        elementUI: 'ElementUI',
+        express: 'Express',
+        koa: 'Koa'
       },
       experience: {
         label: 'Experience',
         eleme: 'Eleme',
         git: 'Git',
-        wechat: 'WeChat'
+        wechat: 'WeChat',
+        adonging: 'Adonging',
+        amap: 'AMap',
+        bmap: 'BMap'
       }
     },
     webBt: {
@@ -60,7 +71,13 @@ const messages = {
       vueNextTick: 'Using Vue.$nextTick() more,it will trigger after DOM rendered',
       migrating: '1.x -> 2.x Migrating',
       vueMigrating: 'The difference is 2.x add virtual DOM',
-      migratingAddress: 'Migration Doc'
+      migratingAddress: 'Migration Doc',
+      ifshow: 'v-if&v-show',
+      vueIfshow: 'v-if means if render DOM.v-show means if display DOM which the DOM was rendered already.JavaScript runs successfully only after DOM rendered.',
+      set: '$set',
+      vueSet: 'The directly way to bind data sync is to use $set()',
+      event: '$event',
+      vueEvent: 'Send the arguments of $event to the event function so that u can get the event Object.'
     },
     webEleme: {
       introduce: 'Introduce',
@@ -90,7 +107,9 @@ const messages = {
       pull: 'git pull origin remote_branch',
       gitPull: 'Clone the remote branch and merge to current repository,it\'s the same as git fetch + git merge.',
       note: 'Note',
-      gitNote: 'git pull your branch to keep up to date with the remote branch before u begin one day\'s work'
+      gitNote: 'git pull your branch to keep up to date with the remote branch before u begin one day\'s work',
+      ignore: 'gitignore',
+      gitIgnore: 'Git will not manage the file if the files config in .gitignore'
     },
     webMiddleLevelCss: {
       compatibility: 'Compatibility',
@@ -119,7 +138,13 @@ const messages = {
       domain: 'Document.domain',
       jsDomain: 'The method can get standard domain',
       event: 'Event',
-      jsEvent: 'Combination key input event、phone rotate event'
+      jsEvent: 'Combination key input event、phone rotate event',
+      form: 'From',
+      jsFrom: 'Key enter will trigger submit type button',
+      console: 'Console',
+      jsConsole: 'console.log can not reflect the real running of code many times.Cause it\'s the sync snapshot.',
+      queue: 'Message Queue',
+      jsQueue: 'JavaScript runs order by message queue(Test Online)'
     },
     webWeChat: {
       introduce: 'Introduce',
@@ -127,6 +152,47 @@ const messages = {
       weAddress: 'WeChat Pubic Subscription Developer Document',
       title: 'Document.title',
       weTitle: 'Every page has different title,but WeChat don\'t know document.title,u needs to use an iframe tag to load the document.title'
+    },
+    webAngular: {
+      introduce: 'Introduce',
+      ngIntroduce: 'Angular is a client MVC framework that developed by Google team.It\'s one of the most popular frameworks.MVC as same as MVVM,they are both based on data binded sync.U can view details on the introduction with MVVM.',
+      scroll: 'ngScroll',
+      ngScroll: 'ng-scroll will diasbled click event'
+    },
+    webAdonging: {
+      introduce: 'Introduce',
+      adIntroduce: 'Adonging.com is a GPS and share traffic company on ShenZhen.It has many Internet projects,this part will introduce my experience in these projects.',
+      lrz: 'lrzJs',
+      adLrz: 'lrz.js is a compression plugin which the compress quality is 0.7.And it cause a 2M picture still has 1.3M after compressed.And it will cause server response with 403 error if request with 1.3M data.So u should set compress quality less than 0.4'
+    },
+    webMiddleLevelJs: {
+      qq: 'QQ',
+      jsQq: 'Link to http://wpa.qq.com/msgrd?v=3&uin=2850879710&site=qq&menu=yes can open QQ online',
+      data: 'Data Type',
+      jsData: 'Be careful of using basic data and quote data.',
+      bit: 'Bit-Reserved',
+      jsBit: '~: Bit-Reserved,~-1 = 0,~(else) = Number,it can be used to do logic judge.'
+    },
+    webAmap: {
+      introduce: 'Introduce',
+      amIntroduce: 'AMap is a Internet map that support location online.This part will remind some problems when using AMap.',
+      amAddress: 'AMap developer doc',
+      convert: 'Convert',
+      amConvert: 'AMap supports convert 40 points every time at most.'
+    },
+    webPrimaryCss: {
+      transform: 'Transform',
+      cssTransform: 'Both 2D&3D are according to coordinates,u can transform on any position with the command transform-origin(change the origin of coordinates).'
+    },
+    webExpress: {
+      introduce: 'Introduce',
+      epIntroduce: 'Express is a faster、open and simple framework that based on NodeJs.',
+      env: 'ENV',
+      epEnv: 'Express will set current environment into \'env\' string so that u can get current environment with app.get(‘env’).Default environment is development if current environment has not been setted.'
+    },
+    webPrimaryJs: {
+      event: 'Event',
+      jsEvent: 'How to get event Object in the event function with several arguments.'
     }
   },
   zh: {
@@ -137,10 +203,16 @@ const messages = {
       home: '家乡'
     },
     web: {
-      primary: '初级',
+      primary: {
+        label: '初级',
+        html: 'HTML',
+        css: 'CSS',
+        js: 'JavaScript'
+      },
       middle: {
         label: '中级',
-        css: 'CSS'
+        css: 'CSS',
+        js: 'JavaScript'
       },
       high: {
         label: '高级',
@@ -157,13 +229,18 @@ const messages = {
           vueResource: 'vue-resource'
         },
         angular: 'Angular',
-        elementUI: 'ElementUI'
+        elementUI: 'ElementUI',
+        express: 'Express',
+        koa: 'Koa'
       },
       experience: {
         label: '经验',
         eleme: '饿了么',
         git: 'Git',
-        wechat: 'WeChat'
+        wechat: 'WeChat',
+        adonging: '一动网',
+        amap: '高德地图',
+        bmap: '百度地图'
       }
     },
     webBt: {
@@ -187,7 +264,13 @@ const messages = {
       vueNextTick: '多用nextTick函数,当DOM节点渲染完毕后触发nextTick的回调函数',
       migrating: '1.x -> 2.x 迁移',
       vueMigrating: '最大的区别是2.x增加了虚拟DOM的概念',
-      migratingAddress: '迁移文档'
+      migratingAddress: '迁移文档',
+      ifshow: 'v-if&v-show',
+      vueIfshow: '注意v-if和v-show的区别，if是‘是否渲染’,直接插入或则移除改DOM节点,show是‘隐藏显示’,改DOM节点一直都在,使用这种属性包裹的组件,js只有在DOM节点在html中才会运行',
+      set: '$set',
+      vueSet: 'vue双向数据双向绑定最靠谱的方法是使用$set()',
+      event: '$event',
+      vueEvent: 'Vue中可以通过传入$event参数获取原生事件对象'
     },
     webEleme: {
       introduce: '简介',
@@ -217,7 +300,9 @@ const messages = {
       pull: 'git pull origin remote_branch',
       gitPull: '克隆远程remote_branch分支并与当前仓库合并,相当于git fetch + git merge,不推荐使用,同步master的更新状态推荐使用git fetch+git merge的方式,使用git fetch 克隆远程分支并保存在本地新建分支,与当前自己工作分支比较新建分支的不同,再与新建分支合并,再更新自己的远程分支,最后删掉本地新建分支,再在自己当前的分支(已和远程分支保持一致)继续开发',
       note: 'Note',
-      gitNote: '每天开始写代码前先登录gitlab看下master分支是否有更新'
+      gitNote: '每天开始写代码前先登录gitlab看下master分支是否有更新',
+      ignore: 'gitignore',
+      gitIgnore: 'Git仓库不管理.gitignore文件里配置的文件'
     },
     webMiddleLevelCss: {
       compatibility: '兼容性',
@@ -246,7 +331,13 @@ const messages = {
       domain: 'Document.domain',
       jsDomain: '可以获取标准域名',
       event: 'Event',
-      jsEvent: '组合键输入事件,手机翻转事件'
+      jsEvent: '组合键输入事件,手机翻转事件',
+      form: 'From',
+      jsFrom: '点击回车会触发submit类型按钮',
+      console: 'Console',
+      jsConsole: 'console.log很多时候不能真正实时的反应JS时序;因为是异步的内存快照',
+      queue: 'Message Queue',
+      jsQueue: 'js程序处理消息队列在线测试'
     },
     webWeChat: {
       introduce: '简介',
@@ -254,6 +345,47 @@ const messages = {
       weAddress: '微信公众号开发者文档',
       title: 'Document.title',
       weTitle: '每个子页面都有不同的title,微信不识别document.title,需要一个iframe load一下'
+    },
+    webAngular: {
+      introduce: '简介',
+      ngIntroduce: 'Angular是谷歌团队开发的一套前端MVC(module view controller)框架,是目前三大前端主流框架之一,MVC和MVVM框架类似,也是基于数据双向绑定原理,详情可参考MVVM介绍',
+      scroll: 'ngScroll',
+      ngScroll: 'ng-scroll插件会禁止点击事件'
+    },
+    webAdonging: {
+      introduce: '简介',
+      adIntroduce: '一动网是深圳一家车载导航及共享出行自研公司,拥有一系列互联网项目,这部分将介绍这些项目里填过的坑',
+      lrz: 'lrzJs',
+      adLrz: 'lrz.js是一款图片压缩插件,压缩质量默认是0.7,导致大于2M的图片压缩后仍有1.3M,此时1.3M的数据添加在http请求头中,会导致后端返回431请求头过大错误,把压缩质量改为0.1就好了'
+    },
+    webMiddleLevelJs: {
+      qq: 'QQ',
+      jsQq: 'js打开链接http://wpa.qq.com/msgrd?v=3&uin=2850879710&site=qq&menu=yes可打开在线QQ即时通讯',
+      data: 'Data Type',
+      jsData: '注意基本类型数据和引用类型数据的使用',
+      bit: 'Bit-Reserved',
+      jsBit: '~: 按位取反,~-1值为0,除-1外其它的值都是非0数字,可做true or false判断'
+    },
+    webAmap: {
+      introduce: '简介',
+      amIntroduce: '高德地图是国内一款提供定位服务的地图,本部分介绍使用高德地图应该注意的问题',
+      amAddress: '高德开放平台开发文档',
+      convert: 'Convert',
+      amConvert: '高德地图一次最多转换40个坐标点'
+    },
+    webPrimaryCss: {
+      transform: 'Transform',
+      cssTransform: '2D&3D变换都是根据坐标系变换,可以通过transform-origin改变坐标原点以实现不同位置的变换'
+    },
+    webExpress: {
+      introduce: '简介',
+      epIntroduce: 'express是一款基于 Node.js 平台,快速、开放、极简的 web 开发框架',
+      env: 'ENV',
+      epEnv: 'express框架会把当前环境变量set进env字符串中,通过app.get(‘env’)获取当前环境变量,没设置环境变量默认为’development’'
+    },
+    webPrimaryJs: {
+      event: 'Event',
+      jsEvent: '带有参数的事件回调函数怎么获取事件对象'
     }
   }
 }

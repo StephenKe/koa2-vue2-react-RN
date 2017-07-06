@@ -12,26 +12,24 @@ export default {
   data () {
     return {
       data: [{
-        label: this.$t('web.primary'),
+        label: this.$t('web.primary.label'),
         key: 1,
         children: [{
-          label: '二级 1-1',
-          key: 11,
-          children: [{
-            label: '三级 1-1-1',
-            key: 111
-          }]
+          label: this.$t('web.primary.html'),
+          key: 11
+        }, {
+          label: this.$t('web.primary.css'),
+          key: 12
+        }, {
+          label: this.$t('web.primary.js'),
+          key: 13
         }]
       }, {
         label: this.$t('web.middle.label'),
         key: 2,
         children: [{
-          label: '二级 2-1',
-          key: 21,
-          children: [{
-            label: '三级 2-1-1',
-            key: 211
-          }]
+          label: this.$t('web.middle.js'),
+          key: 21
         }, {
           label: this.$t('web.middle.css'),
           key: 22
@@ -71,6 +69,12 @@ export default {
         }, {
           label: this.$t('web.frame.elementUI'),
           key: 44
+        }, {
+          label: this.$t('web.frame.express'),
+          key: 57
+        }, {
+          label: this.$t('web.frame.koa'),
+          key: 58
         }]
       }, {
         label: this.$t('web.experience.label'),
@@ -84,6 +88,15 @@ export default {
         }, {
           label: this.$t('web.experience.wechat'),
           key: 53
+        }, {
+          label: this.$t('web.experience.adonging'),
+          key: 54
+        }, {
+          label: this.$t('web.experience.amap'),
+          key: 55
+        }, {
+          label: this.$t('web.experience.bmap'),
+          key: 56
         }]
       }],
       defaultProps: {
@@ -98,7 +111,14 @@ export default {
           [22, '/web/middle-level-css'],
           [31, '/web/node'],
           [32, '/web/high-level-js'],
-          [53, '/web/wechat']
+          [53, '/web/wechat'],
+          [43, '/web/angular'],
+          [54, '/web/adonging'],
+          [21, '/web/middle-level-js'],
+          [55, '/web/amap'],
+          [12, 'web/primary-css'],
+          [57, '/web/express'],
+          [13, 'web/primary-js']
       ]),
       btnTop: false
     }
@@ -112,6 +132,9 @@ export default {
       // 此处不用data.$treeNodeId,用自定义属性key,因路由切换时发现$treeNodeId不会重置,会导致Id判断不准
       if (this.routerMap.has(data.key)) {
         this.$router.replace({ path: this.routerMap.get(data.key) })
+      }
+      if (data.key === 56) {
+        window.open('http://www.jianshu.com/p/2d07fc152d74')
       }
     },
     handleScroll () {

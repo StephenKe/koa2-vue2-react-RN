@@ -10,6 +10,13 @@ import WebMiddleLevelCss from '@/components/WebMiddleLevelCss'
 import WebNode from '@/components/WebNode'
 import WebHighLevelJs from '@/components/WebHighLevelJs'
 import WebWeChat from '@/components/WebWeChat'
+import WebAngular from '@/components/WebAngular'
+import WebAdonging from '@/components/WebAdonging'
+import WebMiddleLevelJs from '@/components/WebMiddleLevelJs'
+import WebAmap from '@/components/WebAmap'
+import WebPrimaryCss from '@/components/WebPrimaryCss'
+import WebExpress from '@/components/WebExpress'
+import WebPrimaryJs from '@/components/WebPrimaryJs'
 
 Vue.use(Router)
 
@@ -56,6 +63,34 @@ export default new Router({
         path: '/web/wechat',
         name: 'wechat',
         component: WebWeChat
+      }, {
+        path: '/web/angular',
+        name: 'angular',
+        component: WebAngular
+      }, {
+        path: '/web/adonging',
+        name: 'adonging',
+        component: WebAdonging
+      }, {
+        path: '/web/middle-level-js',
+        name: 'middle-level-js',
+        component: WebMiddleLevelJs
+      }, {
+        path: '/web/amap',
+        name: 'amap',
+        component: WebAmap
+      }, {
+        path: '/web/primary-css',
+        name: 'primary-css',
+        component: WebPrimaryCss
+      }, {
+        path: '/web/express',
+        name: 'express',
+        component: WebExpress
+      }, {
+        path: '/web/primary-js',
+        name: 'primary-js',
+        component: WebPrimaryJs
       }]
     }
   ]
