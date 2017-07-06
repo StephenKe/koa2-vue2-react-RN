@@ -77,7 +77,8 @@ const messages = {
       set: '$set',
       vueSet: 'The directly way to bind data sync is to use $set()',
       event: '$event',
-      vueEvent: 'Send the arguments of $event to the event function so that u can get the event Object.'
+      vueEvent: 'Send the arguments of $event to the event function so that u can get the event Object.',
+      eventQueue: 'A realization of event queue.'
     },
     webEleme: {
       introduce: 'Introduce',
@@ -270,7 +271,8 @@ const messages = {
       set: '$set',
       vueSet: 'vue双向数据双向绑定最靠谱的方法是使用$set()',
       event: '$event',
-      vueEvent: 'Vue中可以通过传入$event参数获取原生事件对象'
+      vueEvent: 'Vue中可以通过传入$event参数获取原生事件对象',
+      eventQueue: '一个利用事件队列的例子'
     },
     webEleme: {
       introduce: '简介',

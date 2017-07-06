@@ -24,6 +24,10 @@
       </el-collapse-item>
       <el-collapse-item :title="$t('webVue.event')" name="8">
         <div>{{ $t('webVue.vueEvent') }}</div>
+        <div><a href="http://www.jianshu.com/p/93053e3caac2" target="_blank">{{ $t('webVue.eventQueue') }}</a></div>
+      </el-collapse-item>
+      <el-collapse-item :title="$t('webVue.migrating')" name="9">
+        <div>{{ $t('webVue.vueMigrating') }}</div>
         <div><a href="https://vuejs.org/v2/guide/migration.html" target="_blank">{{ $t('webVue.migratingAddress') }}</a></div>
       </el-collapse-item>
     </el-collapse>
