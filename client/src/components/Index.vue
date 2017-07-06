@@ -5,7 +5,7 @@
     </transition>
     <el-button class="lang-switch" type="primary" @click="langSwitch">{{ $t("index.lang") }}</el-button>
     <img src="../assets/logo.png" class="logo">
-    <radiate-btn class="about-me" :title="$t('index.me')"></radiate-btn>
+    <radiate-btn class="about-me" :title="$t('index.me')" v-on:pass="password"></radiate-btn>
     <radiate-btn class="web-develop" :title="$t('index.job')" v-on:route="jumpTo('/web')"></radiate-btn>
     <radiate-btn class="zhan-jiang" :title="$t('index.home')"></radiate-btn>
     <!--<el-button type="primary" v-for="btn in btns" :key="btn" @click="getData(btn)">{{ btn }}</el-button>-->
@@ -53,6 +53,9 @@ export default {
     },
     jumpTo (route) {
       this.$router.replace({ path: route })
+    },
+    password () {
+      this.my$prompt(this.$t('base.password'))
     }
   }
 }

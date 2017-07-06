@@ -3,6 +3,17 @@
  */
 const messages = {
   en: {
+    base: {
+      inputCancel: 'Input Cancel',
+      pleaseInput: 'Please input',
+      tips: 'Tips',
+      confirm: 'Confirm',
+      cancel: 'Cancel',
+      wrongPattern: 'Wrong Pattern',
+      your: 'Your',
+      is: 'is',
+      password: 'password'
+    },
     index: {
       lang: '中文',
       me: 'About Me',
@@ -197,6 +208,17 @@ const messages = {
     }
   },
   zh: {
+    base: {
+      inputCancel: '取消输入',
+      pleaseInput: '请输入',
+      tips: '提示',
+      confirm: '确定',
+      cancel: '取消',
+      wrongPattern: '格式错误',
+      your: '你的',
+      is: '是',
+      password: '密码'
+    },
     index: {
       lang: 'English',
       me: '关于站长',

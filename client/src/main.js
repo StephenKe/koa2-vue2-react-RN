@@ -7,6 +7,7 @@ import elementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import VueI18n from 'vue-i18n'
 import * as lang from './assets/lang/lang'
+import methos from './config/methods'
 const langs = ['zh', 'en']
 
 // console.log(Vue.http)
@@ -25,6 +26,8 @@ const i18n = new VueI18n({
 
 Vue.config.productionTip = false
 
+// 自定义全局方法
+Vue.use(methos)
 /* eslint-disable no-new */
 new Vue({
   router,

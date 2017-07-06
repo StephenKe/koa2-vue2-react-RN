@@ -7,7 +7,7 @@
       width=""
       trigger="click"
       content="">
-      <div class="clickModal" @click="clickHandler()"></div>
+      <div class="clickModal" @click="clickHandler(title)"></div>
       <i class="el-icon-caret-right"></i>
     </el-popover>
     <el-button class="btnModal" v-popover:popover></el-button>
@@ -32,7 +32,11 @@ export default {
     console.log(this.title)
   },
   methods: {
-    clickHandler () {
+    clickHandler (val) {
+      if (val === this.$t('index.me')) {
+        this.$emit('pass')
+        return
+      }
       this.$emit('route')
     }
   }
