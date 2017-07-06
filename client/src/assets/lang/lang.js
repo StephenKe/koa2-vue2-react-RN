@@ -11,8 +11,15 @@ const messages = {
     },
     web: {
       primary: 'Primary',
-      middle: 'Mid-Level',
-      high: 'High-Lever',
+      middle: {
+        label: 'Mid-Level',
+        css: 'CSS'
+      },
+      high: {
+        label: 'High-Lever',
+        node: 'Node',
+        js: 'JavaScript'
+      },
       frame: {
         label: 'Frame',
         bootstrap: 'Bootstrap',
@@ -22,11 +29,14 @@ const messages = {
           vueRouter: 'vue-router',
           vueResource: 'vue-resource'
         },
+        angular: 'Angular',
         elementUI: 'ElementUI'
       },
       experience: {
         label: 'Experience',
-        eleme: 'Eleme'
+        eleme: 'Eleme',
+        git: 'Git',
+        wechat: 'WeChat'
       }
     },
     webBt: {
@@ -63,6 +73,60 @@ const messages = {
       dpr: 'DPR',
       elemeDpr: 'Different screen has different dpr,thus a image will has different size on different screen and it needs deal with dpr',
       dprAddress: 'Xinxu Zhang\'s understand about dpr'
+    },
+    webGit: {
+      introduce: 'Introduce',
+      gitIntroduce: 'Git is the most popular version control utils.Its principle is to change HEAD pointer,even though a delete operation will be recorded,but u\'ve got to make sure u are in the same git repository.',
+      fetch: 'git fetch',
+      gitFetch: 'Clone the remote repository to local.Recommend use this way to develop if team works.Complete command: git fetch origin remote_branch:new_branch',
+      diff: 'git diff other_branch',
+      gitDiff: 'Compare current branch and other branch',
+      merge: 'git merge other_branch',
+      gitMerge: 'Merge current branch and other branch',
+      checkout: 'git checkout other_branch',
+      gitCheckout: 'Switch to other branch',
+      branch: 'git branch -d other_branch',
+      gitBranch: 'Delete other branch,but it must be on master branch',
+      pull: 'git pull origin remote_branch',
+      gitPull: 'Clone the remote branch and merge to current repository,it\'s the same as git fetch + git merge.',
+      note: 'Note',
+      gitNote: 'git pull your branch to keep up to date with the remote branch before u begin one day\'s work'
+    },
+    webMiddleLevelCss: {
+      compatibility: 'Compatibility',
+      cssCompatibility: 'CSS attribute compatibility checking online'
+    },
+    webNode: {
+      introduce: 'Introduce',
+      nodeIntroduce: 'I thought that NodeJs is designed to work in the interface.',
+      restful: 'RESTful',
+      nodeRestful: 'RESTful is some kind of design style、design principle and limit condition.Especially for the communication with client and server.For example the response status is designed according to RESTful style.'
+    },
+    webHighLevelJs: {
+      introduce: 'Introduce',
+      jsIntroduce: 'Recommend 《JavaScript Senior Program Design》,this part comes from the book.',
+      generation: '*function',
+      jsGeneration: '*function: present generation function.Code like: yield generation.next().value,It will output a value when the generation function runs the first time.Run yieid again will output a new value and the generation function runs the second time',
+      float: 'Float',
+      jsFloat: 'Do not compare float data casually,example:',
+      property: 'Object.defineProperty',
+      jsProperty: 'Object.defineProperty(Obj, \'property\', {[[Configrable]], [[Enumerable]], [[Writable]], [[Value]]})',
+      jsProperty1: 'Configrable: \'configrable\'',
+      jsProperty2: 'Enumerable: \'for-in enable\'',
+      jsProperty3: 'Writable: \'writable\'',
+      jsProperty4: 'Value: \'value\'',
+      jsProperty5: 'Every Object in JavaScript has defineProperty method.The method has 4 configable attribute(default: true、true、true、\'\').Once Object.defineProperty() has called,the 4 configable attribute will be writen(default: false、false、false、\'\').',
+      domain: 'Document.domain',
+      jsDomain: 'The method can get standard domain',
+      event: 'Event',
+      jsEvent: 'Combination key input event、phone rotate event'
+    },
+    webWeChat: {
+      introduce: 'Introduce',
+      weIntroduce: 'WeChat Pubic Subscription',
+      weAddress: 'WeChat Pubic Subscription Developer Document',
+      title: 'Document.title',
+      weTitle: 'Every page has different title,but WeChat don\'t know document.title,u needs to use an iframe tag to load the document.title'
     }
   },
   zh: {
@@ -74,8 +138,15 @@ const messages = {
     },
     web: {
       primary: '初级',
-      middle: '中级',
-      high: '高级',
+      middle: {
+        label: '中级',
+        css: 'CSS'
+      },
+      high: {
+        label: '高级',
+        node: 'Node',
+        js: 'JavaScript'
+      },
       frame: {
         label: '框架',
         bootstrap: 'Bootstrap',
@@ -85,11 +156,14 @@ const messages = {
           vueRouter: 'vue-router',
           vueResource: 'vue-resource'
         },
+        angular: 'Angular',
         elementUI: 'ElementUI'
       },
       experience: {
         label: '经验',
-        eleme: '饿了么'
+        eleme: '饿了么',
+        git: 'Git',
+        wechat: 'WeChat'
       }
     },
     webBt: {
@@ -126,6 +200,60 @@ const messages = {
       dpr: 'DPR',
       elemeDpr: '不同屏幕有不同的设备像素比dpr,因此同一图片在不同屏幕上的显示大小是不一样的,需做dpr处理',
       dprAddress: '张鑫旭关于dpr的讲解'
+    },
+    webGit: {
+      introduce: '简介',
+      gitIntroduce: 'git是当前市面上最流行的版本库管理工具,没有之一。其原理是git所有的操作都是改变HEAD指针,即使是删除操作也会有记录,前提是同一个git仓库。',
+      fetch: 'git fetch',
+      gitFetch: '将远程的一个分支克隆到本地,团队开发建议新建一个本地分支保存此远程分支,完整指令：git fetch origin remote_branch:new_branch',
+      diff: 'git diff other_branch',
+      gitDiff: '比较当前仓库和other_branch仓库的不同',
+      merge: 'git merge other_branch',
+      gitMerge: '当前仓库与other_branch仓库合并',
+      checkout: 'git checkout other_branch',
+      gitCheckout: '切换到other_branch仓库',
+      branch: 'git branch -d other_branch',
+      gitBranch: '删除other_branch仓库,前提是当前仓库必须是master分支',
+      pull: 'git pull origin remote_branch',
+      gitPull: '克隆远程remote_branch分支并与当前仓库合并,相当于git fetch + git merge,不推荐使用,同步master的更新状态推荐使用git fetch+git merge的方式,使用git fetch 克隆远程分支并保存在本地新建分支,与当前自己工作分支比较新建分支的不同,再与新建分支合并,再更新自己的远程分支,最后删掉本地新建分支,再在自己当前的分支(已和远程分支保持一致)继续开发',
+      note: 'Note',
+      gitNote: '每天开始写代码前先登录gitlab看下master分支是否有更新'
+    },
+    webMiddleLevelCss: {
+      compatibility: '兼容性',
+      cssCompatibility: 'CSS属性兼容性在线检查'
+    },
+    webNode: {
+      introduce: '简介',
+      nodeIntroduce: '个人理解NodeJs就是用来编写设计后台接口的',
+      restful: 'RESTful',
+      nodeRestful: 'RESTful是一种设计风格,设计原则和约束条件,特别是前后端的通信规范,比如各种状态码就是基于RESTful规范'
+    },
+    webHighLevelJs: {
+      introduce: '简介',
+      jsIntruduce: '推荐《JavaScript高级程序设计》,这部分内容摘自此书',
+      generation: '*function',
+      jsGeneration: '带 * 号的函数定义: 表示生成器函数,与yield,generation.next().value,表示执行一次生成器函数得到的值,再次执行就是下一次的值',
+      float: 'Float',
+      jsFloat: '不要随便比较数值浮点型数据,example:',
+      property: 'Object.defineProperty',
+      jsProperty: 'Object.defineProperty(Obj, \'property\', {[[Configrable]], [[Enumerable]], [[Writable]], [[Value]]})',
+      jsProperty1: 'Configrable: \'可删除\'',
+      jsProperty2: 'Enumerable: \'可for-in\'',
+      jsProperty3: 'Writable: \'可写\'',
+      jsProperty4: 'Value: \'值\'',
+      jsProperty5: 'Js中对象都会内置有defineProperty方法,方法中的四个可配置属性按顺序默认为true、true、true、\'\',而一旦对象调用了defineProperty方法,无论给不给方法配置参数,四个可配置参数的默认值将被改写为false、false、false、\'\'',
+      domain: 'Document.domain',
+      jsDomain: '可以获取标准域名',
+      event: 'Event',
+      jsEvent: '组合键输入事件,手机翻转事件'
+    },
+    webWeChat: {
+      introduce: '简介',
+      weIntroduce: '基于微信平台开发微信公众号',
+      weAddress: '微信公众号开发者文档',
+      title: 'Document.title',
+      weTitle: '每个子页面都有不同的title,微信不识别document.title,需要一个iframe load一下'
     }
   }
 }

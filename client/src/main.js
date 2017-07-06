@@ -30,7 +30,7 @@ new Vue({
   router,
   i18n,
   template: `<div>
-                <el-button v-show="pathName" type="primary" class="home" icon="close" @click="home"></el-button>
+                <el-button v-show="pathName" type="primary" class="home" @click="home">H</el-button>
                 <transition name="fade">
                     <router-view class="view"></router-view>
                 </transition>
