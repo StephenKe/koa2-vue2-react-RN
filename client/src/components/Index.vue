@@ -67,8 +67,8 @@ export default {
                 message: this.$t('base.password') + ' ' + this.$t('base.err')
               })
             } else {
-//              window.location.href = 'https://www.baidu.com'
-              window.open('https://www.baidu.com')
+              window.location.href = 'https://www.baidu.com'
+//              window.open('https://www.baidu.com')
             }
           })
           .catch(function (err) {
