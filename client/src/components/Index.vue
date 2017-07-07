@@ -7,7 +7,7 @@
     <img src="../assets/logo.png" class="logo">
     <radiate-btn class="about-me" :title="$t('index.me')" v-on:pass="password"></radiate-btn>
     <radiate-btn class="web-develop" :title="$t('index.job')" v-on:route="jumpTo('/web')"></radiate-btn>
-    <radiate-btn class="zhan-jiang" :title="$t('index.home')"></radiate-btn>
+    <radiate-btn class="zhan-jiang" :title="$t('index.home')" v-on:route="jumpTo('/zhan-jiang')"></radiate-btn>
     <el-button id="daddy" type="primary" @click="getPassword">Daddy</el-button>
     <!--<el-button type="primary" v-for="btn in btns" :key="btn" @click="getData(btn)">{{ btn }}</el-button>-->
     <!--<div class="hello">-->
