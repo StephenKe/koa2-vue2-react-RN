@@ -12,7 +12,8 @@ const messages = {
       wrongPattern: 'Wrong Pattern',
       your: 'Your',
       is: 'is',
-      password: 'password'
+      password: 'password',
+      err: 'error'
     },
     index: {
       lang: '中文',
@@ -217,7 +218,8 @@ const messages = {
       wrongPattern: '格式错误',
       your: '你的',
       is: '是',
-      password: '密码'
+      password: '密码',
+      err: '错误'
     },
     index: {
       lang: 'English',

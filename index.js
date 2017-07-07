@@ -14,6 +14,11 @@ let cors = require('koa-cors');
 
 app.use(cors());
 
+let password = mock.number();
+setInterval(() => {
+  password = mock.number();
+}, 24 * 3600 * 1000)
+
 // let promise = require('bluebird');
 
 // app.use(convert(function *(next){
@@ -52,6 +57,22 @@ router
     })
     .get('/api/image', function (ctx, next) {
         ctx.body = mock.image;
+    })
+    .get('/api/daddy/:id', function (ctx, next) {
+        let req = ctx.request.url;
+        let reqPassword = req.slice(req.lastIndexOf('/') + 1);
+        if (reqPassword == 'whosyourdaddy') {
+          ctx.body = password;
+        }
+    })
+    .get('/api/password/:id', function (ctx, next) {
+        let req = ctx.request.url;
+        let reqPassword = req.slice(req.lastIndexOf('/') + 1);
+        if (reqPassword == password) {
+          ctx.body = true;
+        } else {
+          ctx.body = false;
+        }
     });
 
 app.use(router.routes());

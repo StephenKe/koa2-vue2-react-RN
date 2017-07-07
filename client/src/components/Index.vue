@@ -8,6 +8,7 @@
     <radiate-btn class="about-me" :title="$t('index.me')" v-on:pass="password"></radiate-btn>
     <radiate-btn class="web-develop" :title="$t('index.job')" v-on:route="jumpTo('/web')"></radiate-btn>
     <radiate-btn class="zhan-jiang" :title="$t('index.home')"></radiate-btn>
+    <el-button id="daddy" type="primary" @click="getPassword">Daddy</el-button>
     <!--<el-button type="primary" v-for="btn in btns" :key="btn" @click="getData(btn)">{{ btn }}</el-button>-->
     <!--<div class="hello">-->
       <!--<h1>{{ msg }}</h1>-->
@@ -55,7 +56,38 @@ export default {
       this.$router.replace({ path: route })
     },
     password () {
-      this.my$prompt(this.$t('base.password'))
+      this.my$prompt(this.$t('base.password'), /^\d+$/, (val) => {
+        this
+          .$http
+          .get('/api/password/' + val.value)
+          .then(function (res) {
+            if (!res.data) {
+              this.$message({
+                type: 'info',
+                message: this.$t('base.password') + ' ' + this.$t('base.err')
+              })
+            } else {
+//              window.location.href = 'https://www.baidu.com'
+              window.open('https://www.baidu.com')
+            }
+          })
+          .catch(function (err) {
+            console.log(err)
+          })
+      })
+    },
+    getPassword () {
+      this.my$prompt('baba', /^[a-z]+$/i, (val) => {
+        this
+          .$http
+          .get('/api/daddy/' + val.value)
+          .then(function (res) {
+            console.log(res.data)
+          })
+          .catch(function (err) {
+            console.log(err)
+          })
+      })
     }
   }
 }
@@ -123,4 +155,15 @@ a {
   top: 3%;
   left: 75%;
 }
+</style>
+<style>
+  .el-message-box {
+    width: 350px !important;
+  }
+  #daddy {
+    position: fixed;
+    left: 40%;
+    top: 40%;
+    display: none;
+  }
 </style>

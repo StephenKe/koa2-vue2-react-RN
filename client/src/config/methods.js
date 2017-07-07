@@ -5,18 +5,13 @@ function install (vue) {
   vue.prototype.my$prompt = my$prompt
 }
 
-function my$prompt (inputTarget) {
+function my$prompt (inputTarget, pattern, cb) {
   this.$prompt(this.$t('base.pleaseInput') + ' ' + inputTarget, this.$t('base.tips'), {
     confirmButtonText: this.$t('base.confirm'),
     cancelButtonText: this.$t('base.cancel'),
-    inputPattern: /^\d+$/,
+    inputPattern: pattern,
     inputErrorMessage: inputTarget + this.$t('base.wrongPattern')
-  }).then(({ value }) => {
-    this.$message({
-      type: 'success',
-      message: this.$t('base.your') + ' ' + inputTarget + ' ' + this.$t('base.is') + ': ' + value
-    })
-  }).catch(() => {
+  }).then(cb).catch(() => {
     this.$message({
       type: 'info',
       message: this.$t('base.inputCancel')
