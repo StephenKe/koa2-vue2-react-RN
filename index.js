@@ -4,6 +4,7 @@
 "use strict"
 
 // const babel = require('babel-register');
+let fs = require('fs');
 let koa = require('koa');
 let Router = require('koa-router');
 let mock = require('./mock_data');
@@ -11,8 +12,15 @@ let app = new koa();
 let router = new Router();
 const convert = require('koa-convert');
 let cors = require('koa-cors');
+let serve = require('koa-static-server');
 
 app.use(cors());
+
+if (process.env.NODE_ENV == 'production' || process.env.NODE_ENV == 'test') {
+    app.use(serve({rootDir: __dirname + '/client/dist/static', maxage: 30 * 24 * 60 * 60 * 1000, gzip: true, rootPath: '/static'}));
+} else {
+    app.use(serve({rootDir: __dirname + '/client/dist/static', maxage: 30 * 24 * 60 * 60 * 1000, gzip: true, rootPath: '/static'}));
+}
 
 let password = mock.number();
 setInterval(() => {
@@ -43,6 +51,11 @@ setInterval(() => {
 //
 // }));
 router
+    .get('/', function (ctx, next) {
+        let homePath = process.env.NODE_ENV === 'development'? '/client/index.html' : '/client/dist/index.html';
+        let homeHtml = fs.readFileSync(__dirname + homePath);
+        ctx.body = homeHtml.toString();
+    })
     .get('/api/text', function (ctx, next) {
         ctx.body = mock.text;
     })

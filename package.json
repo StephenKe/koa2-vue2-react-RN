@@ -28,6 +28,7 @@
     "koa-cors": "0.0.16",
     "koa-route": "^3.2.0",
     "koa-router": "^7.2.0",
+    "koa-static-server": "^0.1.8",
     "mockjs": "^1.0.1-beta3"
   }
 }

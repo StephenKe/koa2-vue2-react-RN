@@ -37,9 +37,8 @@ class App extends Component {
     };
     langSwitch () {
         storeData.dispatch({ type: this.state.buttonContent });
-        this.state.buttonContent = this.state.buttonContent === 'English' ? '中文' : 'English';
-        this.state.lang = this.state.buttonContent === 'English' ? zh_CN : en_US;
-        this.setState({ buttonContent: this.state.buttonContent, lang: this.state.lang });
+        this.setState({ buttonContent: this.state.buttonContent === 'English' ? '中文' : 'English' });
+        this.setState({ lang: this.state.buttonContent === 'English' ? en_US : zh_CN });
     };
     render() {
         let close = () => this.setState({ show: false});
