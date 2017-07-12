@@ -126,7 +126,9 @@ const messages = {
     },
     webMiddleLevelCss: {
       compatibility: 'Compatibility',
-      cssCompatibility: 'CSS attribute compatibility checking online'
+      cssCompatibility: 'CSS attribute compatibility checking online',
+      canvas: 'Canvas',
+      cssCanvas: 'draw 2D use context attribute while 3D use webGL(judge compatibility before use)'
     },
     webNode: {
       introduce: 'Introduce',
@@ -332,7 +334,9 @@ const messages = {
     },
     webMiddleLevelCss: {
       compatibility: '兼容性',
-      cssCompatibility: 'CSS属性兼容性在线检查'
+      cssCompatibility: 'CSS属性兼容性在线检查',
+      canvas: 'Canvas',
+      cssCanvas: '绘制2D图形用context属性,绘制3D图形用webGL属性(需做判断,存在兼容性问题)'
     },
     webNode: {
       introduce: '简介',
