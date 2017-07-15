@@ -159,7 +159,9 @@ const messages = {
       console: 'Console',
       jsConsole: 'console.log can not reflect the real running of code many times.Cause it\'s the sync snapshot.',
       queue: 'Message Queue',
-      jsQueue: 'JavaScript runs order by message queue(Test Online)'
+      jsQueue: 'JavaScript runs order by message queue(Test Online)',
+      http: 'HTTP',
+      jsHttp: 'ajax(The most common way to request.Refresh page partly),Comet(Server push data to client.Supports short and long polling.Realize with SSE.Fit in scene of competition scores and stock quotes.),Web Socket(Customized communication protocol.Fit in small amounts of data transfer)'
     },
     webWeChat: {
       introduce: 'Introduce',
@@ -367,7 +369,9 @@ const messages = {
       console: 'Console',
       jsConsole: 'console.log很多时候不能真正实时的反应JS时序;因为是异步的内存快照',
       queue: 'Message Queue',
-      jsQueue: 'js程序处理消息队列在线测试'
+      jsQueue: 'js程序处理消息队列在线测试',
+      http: 'HTTP',
+      jsHttp: 'ajax(目前请求后台数据最通用的方法,局部刷新页面),Comet(服务器向页面推送数据,支持短轮询和长轮询,配合服务器发送事件SSE实现,适合体育比赛分数和股票报价等场景),Web Socket(自定义通信协议,适合少量数据传输的场景)'
     },
     webWeChat: {
       introduce: '简介',
