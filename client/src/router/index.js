@@ -17,7 +17,8 @@ import WebAmap from '@/components/WebAmap'
 import WebPrimaryCss from '@/components/WebPrimaryCss'
 import WebExpress from '@/components/WebExpress'
 import WebPrimaryJs from '@/components/WebPrimaryJs'
-import Construction from '@/components/Construction'
+// import Construction from '@/components/Construction'
+import ZhanJiang from '@/components/ZhanJiang'
 
 Vue.use(Router)
 
@@ -97,7 +98,7 @@ export default new Router({
     {
       path: '/zhan-jiang',
       name: 'zhan-jiang',
-      component: Construction
+      component: ZhanJiang
     }
   ]
 })

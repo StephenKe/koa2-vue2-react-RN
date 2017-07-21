@@ -210,6 +210,31 @@ const messages = {
     webPrimaryJs: {
       event: 'Event',
       jsEvent: 'How to get event Object in the event function with several arguments.'
+    },
+    zhanJiang: {
+      showVideo: 'Show Video',
+      hideVideo: 'Hide Video',
+      lobster: 'Lobster',
+      abalone: 'Abalone',
+      oyester: 'Oyester',
+      cucumber: 'Sea Cucumber',
+      crab: 'Crab',
+      scallop: 'Scallop',
+      fujian: 'Fujian',
+      sunrise: 'Sea Sunrise',
+      beach: 'Beach',
+      ship: 'Ship',
+      lighthouse: 'Lighthouse',
+      temple: 'Temple',
+      orchard: 'Orchard',
+      bikini: 'Bikini',
+      street: 'Street',
+      tent: 'Tent',
+      family: 'Fisherman Family',
+      hostel: 'Hostel',
+      hotel: 'Hotel',
+      room: 'Sea View Room',
+      author: 'Author Home'
     }
   },
   zh: {
@@ -420,6 +445,31 @@ const messages = {
     webPrimaryJs: {
       event: 'Event',
       jsEvent: '带有参数的事件回调函数怎么获取事件对象'
+    },
+    zhanJiang: {
+      showVideo: '展开视频',
+      hideVideo: '收起视频',
+      lobster: '吃龙虾',
+      abalone: '吃鲍鱼',
+      oyester: '吃生蚝',
+      cucumber: '吃海参',
+      crab: '吃螃蟹',
+      scallop: '吃扇贝',
+      fujian: '吃福建人',
+      sunrise: '看海上日出',
+      beach: '看沙滩',
+      ship: '看军舰',
+      lighthouse: '看灯塔',
+      temple: '看寺庙',
+      orchard: '看果园',
+      bikini: '看比基尼',
+      street: '睡大街',
+      tent: '住帐篷',
+      family: '住渔家',
+      hostel: '住青旅',
+      hotel: '住酒店',
+      room: '住海景房',
+      author: '住站长家'
     }
   }
 }
