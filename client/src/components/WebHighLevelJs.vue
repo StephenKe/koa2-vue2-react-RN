@@ -36,6 +36,10 @@
       <el-collapse-item :title="$t('webHighLevelJs.http')" name="10">
         <div>{{ $t('webHighLevelJs.jsHttp') }}</div>
       </el-collapse-item>
+      <el-collapse-item :title="$t('webHighLevelJs.navigator')" name="11">
+        <div>{{ $t('webHighLevelJs.jsNavigator') }}</div>
+        <div>{{ $t('webHighLevelJs.jsNavigator1') }}</div>
+      </el-collapse-item>
     </el-collapse>
   </div>
 </template>

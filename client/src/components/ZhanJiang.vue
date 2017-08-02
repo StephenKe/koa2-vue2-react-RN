@@ -10,7 +10,7 @@
     </el-collapse>
     <el-carousel :interval="4000" arrow="always" style="margin-top: 3%">
       <el-carousel-item v-for="item in items" :key="item">
-        <el-row :gutter="10">
+        <el-row :gutter="10" style="margin-top: 3%">
           <el-col v-for="i in item" :key="i" :xs="8" :sm="6" :md="4" :lg="3"><div class="grid-content">{{ i }}</div></el-col>
         </el-row>
       </el-carousel-item>
@@ -76,21 +76,24 @@ export default {
   }
 
   .el-carousel__item:nth-of-type(1) {
-    /*background-image: url("../assets/images/eat.jpg");*/
-    background-color: #afafaf;
+    background-image: url("../assets/images/eat.jpg");
+    /*background-color: #afafaf;*/
   }
 
   .el-carousel__item:nth-of-type(2) {
-    /*background-image: url("../assets/images/look.jpg");*/
-    background-color: #afafaf;
+    background-image: url("../assets/images/look.jpg");
+    /*background-color: #afafaf;*/
   }
 
   .el-carousel__item:nth-of-type(3) {
-    /*background-image: url("../assets/images/stay.jpg");*/
-    background-color: #afafaf;
+    background-image: url("../assets/images/stay.jpg");
+    /*background-color: #afafaf;*/
     background-position: 50% 50%;
   }
   .grid-content {
     text-align: center;
+    color: #F7BA2A;
+    font-size: 20px;
+    font-weight: bold;
   }
 </style>

@@ -161,7 +161,10 @@ const messages = {
       queue: 'Message Queue',
       jsQueue: 'JavaScript runs order by message queue(Test Online)',
       http: 'HTTP',
-      jsHttp: 'ajax(The most common way to request.Refresh page partly),Comet(Server push data to client.Supports short and long polling.Realize with SSE.Fit in scene of competition scores and stock quotes.),Web Socket(Customized communication protocol.Fit in small amounts of data transfer)'
+      jsHttp: 'ajax(The most common way to request.Refresh page partly),Comet(Server push data to client.Supports short and long polling.Realize with SSE.Fit in scene of competition scores and stock quotes.),Web Socket(Customized communication protocol.Fit in small amounts of data transfer)',
+      navigator: 'Navigator',
+      jsNavigator: 'navigator.geolocation.getCurrentPosition(callbackFn):Get user current position after user\'s allowed(modal tips)',
+      jsNavigator1: 'navigator.geolocation.watchPosition(callbackFn):Watch user current position.It will return id and u can use clearWatch(id) to cancel watching.The first time call the Fn will callback current position and the next time user current position changed will emit the Fn.'
     },
     webWeChat: {
       introduce: 'Introduce',
@@ -396,7 +399,10 @@ const messages = {
       queue: 'Message Queue',
       jsQueue: 'js程序处理消息队列在线测试',
       http: 'HTTP',
-      jsHttp: 'ajax(目前请求后台数据最通用的方法,局部刷新页面),Comet(服务器向页面推送数据,支持短轮询和长轮询,配合服务器发送事件SSE实现,适合体育比赛分数和股票报价等场景),Web Socket(自定义通信协议,适合少量数据传输的场景)'
+      jsHttp: 'ajax(目前请求后台数据最通用的方法,局部刷新页面),Comet(服务器向页面推送数据,支持短轮询和长轮询,配合服务器发送事件SSE实现,适合体育比赛分数和股票报价等场景),Web Socket(自定义通信协议,适合少量数据传输的场景)',
+      navigator: 'Navigator',
+      jsNavigator: 'navigator.geolocation.getCurrentPosition(callbackFn):弹出对话框获取用户当前位置',
+      jsNavigator1: 'navigator.geolocation.watchPosition(callbackFn)：时刻观测位置变化，函数返回一个id值，可调用clearWatch(id)取消观测，第一次调用该方法就会回调此刻用户位置，后续当用户位置改变会再次触发回调'
     },
     webWeChat: {
       introduce: '简介',
