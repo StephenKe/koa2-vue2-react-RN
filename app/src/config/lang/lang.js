@@ -30,7 +30,8 @@ const zh_CN = {
     phone: '手机',
     phoneVal: '15012654210',
     mail: 'E-mail',
-    mailVal: 'kejianok@126.com'
+    mailVal: 'kejianok@126.com',
+    certificate: '证书'
 }
 
 const en_US = {
@@ -62,7 +63,8 @@ const en_US = {
     phone: 'Phone',
     phoneVal: '15012654210',
     mail: 'E-mail',
-    mailVal: 'kejianok@126.com'
+    mailVal: 'kejianok@126.com',
+    certificate: 'Certificate'
 }
 
 export {

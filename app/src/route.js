@@ -5,6 +5,7 @@ import Github from './component/Github'
 import Jianshu from './component/Jianshu'
 import Zhihu from './component/Zhihu'
 import Base from './component/Base'
+import Certificate from './component/Certificate'
 
 ////////////////////////////////////////////////////////////
 // then our route config
@@ -24,6 +25,10 @@ const myRoutes = [
     {
         path: '/base',
         component: Base
+    },
+    {
+        path: '/certificate',
+        component: Certificate
     }
 ]
 

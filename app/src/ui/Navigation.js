@@ -53,6 +53,13 @@ class Nav extends Component {
                             defaultMessage='no data'
                         />
                     </Link></NavItem>
+                    <NavItem eventKey={2}><Link to="/certificate">
+                        <FormattedMessage
+                            id='certificate'
+                            description='certificate'
+                            defaultMessage='no data'
+                        />
+                    </Link></NavItem>
                 </Nav1>
             </IntlProvider>
         )
