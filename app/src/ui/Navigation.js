@@ -25,24 +25,31 @@ class Nav extends Component {
         return (
             <IntlProvider locale="en" messages={this.props.lang}>
                 <Nav1 bsStyle="pills" stacked activeKey={this.state.atKey} onSelect={this.handleSelect} className="pills">
-                    <NavItem eventKey={1}><Link to="/github">
+                    {/*<NavItem eventKey={1}><Link to="/github">*/}
+                        {/*<FormattedMessage*/}
+                            {/*id='github'*/}
+                            {/*description='github'*/}
+                            {/*defaultMessage='no data'*/}
+                        {/*/>*/}
+                    {/*</Link></NavItem>*/}
+                    {/*<NavItem eventKey={2}><Link to="/jianshu">*/}
+                        {/*<FormattedMessage*/}
+                            {/*id='jianshu'*/}
+                            {/*description='jianshu'*/}
+                            {/*defaultMessage='no data'*/}
+                        {/*/>*/}
+                    {/*</Link></NavItem>*/}
+                    {/*<NavItem eventKey={3}><Link to="/zhihu">*/}
+                        {/*<FormattedMessage*/}
+                            {/*id='zhihu'*/}
+                            {/*description='zhihu'*/}
+                            {/*defaultMessage='no data'*/}
+                        {/*/>*/}
+                    {/*</Link></NavItem>*/}
+                    <NavItem eventKey={1}><Link to="/base">
                         <FormattedMessage
-                            id='github'
-                            description='github'
-                            defaultMessage='no data'
-                        />
-                    </Link></NavItem>
-                    <NavItem eventKey={2}><Link to="/jianshu">
-                        <FormattedMessage
-                            id='jianshu'
-                            description='jianshu'
-                            defaultMessage='no data'
-                        />
-                    </Link></NavItem>
-                    <NavItem eventKey={3}><Link to="/zhihu">
-                        <FormattedMessage
-                            id='zhihu'
-                            description='zhihu'
+                            id='base'
+                            description='base'
                             defaultMessage='no data'
                         />
                     </Link></NavItem>

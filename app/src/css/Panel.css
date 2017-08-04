@@ -1,0 +1,7 @@
+.panel .input-group {
+  margin-bottom: 5px;
+}
+
+.panel .input-group .input-group-addon:first-of-type {
+  background-color: skyblue;
+}

@@ -46,14 +46,21 @@ class App extends Component {
             <IntlProvider locale="en" messages={this.state.lang}>
                 <div className="App">
                     <div className="App-header">
-                        <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
-                        <h2>
+                        <p>
                             <FormattedMessage
                                 id='author'
-                                description='author name'
+                                description='author'
                                 defaultMessage='no data'
                             />
-                        </h2>
+                        </p>
+                        <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
+                        <p className="title">
+                            <FormattedMessage
+                                id='title'
+                                description='title'
+                                defaultMessage='no data'
+                            />
+                        </p>
                         <Btn className="Nav-icon" onClick={ this.openModal }><Glyphicon glyph="align-justify" /></Btn>
                         <Button style="default" content={ this.state.buttonContent } pclick={ this.langSwitch }></Button>
                     </div>
