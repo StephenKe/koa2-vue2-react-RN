@@ -104,7 +104,7 @@ export default {
     position: relative;
     width: 40px;
     height: 40px;
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
   }
   .container:hover {
     cursor: pointer;

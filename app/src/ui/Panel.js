@@ -28,13 +28,15 @@ class Panel extends Component {
         ));
         map.set('Thumbnail', items.map((item, i) =>
             <bs.Thumbnail src={demo} alt="242x200" key={i}>
-                <h3>Thumbnail label</h3>
-                <p>Description</p>
-                <p>
-                    <bs.Button bsStyle="primary">Button</bs.Button>&nbsp;
-                    <bs.Button bsStyle="default">Button</bs.Button>
-                </p>
+                <h3>{item.label}</h3>
+                <p>{item.desc}</p>
             </bs.Thumbnail>
+        ));
+        map.set('progress', items.map((item, i) =>
+            <div key={i}>
+                <h3>{item.label}</h3>
+                <bs.ProgressBar active bsStyle="danger" now={item.progress} />
+            </div>
         ));
         const listItems = map.get(layout);
         return (

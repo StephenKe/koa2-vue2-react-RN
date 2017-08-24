@@ -4,7 +4,7 @@
       <div v-if="ok" class="index"></div>
     </transition>
     <el-button class="lang-switch" type="primary" @click="langSwitch">{{ $t("index.lang") }}</el-button>
-    <img src="../assets/logo.png" class="logo">
+    <img src="../assets/q.png" class="logo">
     <radiate-btn class="about-me" :title="$t('index.me')" v-on:pass="password"></radiate-btn>
     <radiate-btn class="web-develop" :title="$t('index.job')" v-on:route="jumpTo('/web')"></radiate-btn>
     <radiate-btn class="zhan-jiang" :title="$t('index.home')" v-on:route="jumpTo('/zhan-jiang')"></radiate-btn>
@@ -142,13 +142,18 @@ a {
 }
 .about-me {
   position: absolute !important;
-  left: 45%;
-  top: 10%;
+  left: 40%;
+  top: 30%;
 }
 .zhan-jiang {
   position: absolute !important;
-  left: 88%;
-  top: 65%;
+  left: 50%;
+  top: 39%;
+}
+.web-develop {
+  position: absolute !important;
+  left: 26%;
+  top: 36%;
 }
 .lang-switch {
   position: absolute;

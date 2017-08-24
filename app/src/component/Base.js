@@ -44,6 +44,7 @@ class Base extends Component {
                         defaultMessage='no data'
                         />}
                            style="primary"
+                           layout="input-group"
                            items={this.state.items}></Panel>
                 </div>
             </IntlProvider>

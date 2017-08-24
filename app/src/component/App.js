@@ -9,6 +9,7 @@ import Nav from '../ui/Navigation'
 import Button from '../ui/Button'
 import { Button as Btn, Glyphicon, Modal } from 'react-bootstrap'
 import myRoutes from '../route';
+import bg from '../images/bg.png';
 import {
     BrowserRouter as Router,
     Route
@@ -64,29 +65,32 @@ class App extends Component {
                         <Btn className="Nav-icon" onClick={ this.openModal }><Glyphicon glyph="align-justify" /></Btn>
                         <Button style="default" content={ this.state.buttonContent } pclick={ this.langSwitch }></Button>
                     </div>
-                    <Router>
-                        <div>
-                            <Modal
-                                show={this.state.show}
-                                onHide={close}
-                                container={this}
-                                aria-labelledby="contained-modal-title"
-                            >
-                                {/*<Modal.Header closeButton>*/}
-                                {/*<Modal.Title id="contained-modal-title">Contained Modal</Modal.Title>*/}
-                                {/*</Modal.Header>*/}
-                                <Modal.Body>
-                                    <Nav pfn={close} lang={this.state.lang}></Nav>
-                                </Modal.Body>
-                                {/*<Modal.Footer>*/}
-                                {/*<Button onClick={close}>Close</Button>*/}
-                                {/*</Modal.Footer>*/}
-                            </Modal>
-                            {myRoutes.map((route, i) => (
-                                <RouteWithSubRoutes key={i} {...route}/>
-                            ))}
-                        </div>
-                    </Router>
+                    <div className="App-body">
+                        <div className="bg-container"></div>
+                        <Router>
+                            <div>
+                                <Modal
+                                    show={this.state.show}
+                                    onHide={close}
+                                    container={this}
+                                    aria-labelledby="contained-modal-title"
+                                >
+                                    {/*<Modal.Header closeButton>*/}
+                                    {/*<Modal.Title id="contained-modal-title">Contained Modal</Modal.Title>*/}
+                                    {/*</Modal.Header>*/}
+                                    <Modal.Body>
+                                        <Nav pfn={close} lang={this.state.lang}></Nav>
+                                    </Modal.Body>
+                                    {/*<Modal.Footer>*/}
+                                    {/*<Button onClick={close}>Close</Button>*/}
+                                    {/*</Modal.Footer>*/}
+                                </Modal>
+                                {myRoutes.map((route, i) => (
+                                    <RouteWithSubRoutes key={i} {...route}/>
+                                ))}
+                            </div>
+                        </Router>
+                    </div>
                 </div>
             </IntlProvider>
     );
