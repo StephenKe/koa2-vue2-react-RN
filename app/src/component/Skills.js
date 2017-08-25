@@ -52,7 +52,21 @@ class Base extends Component {
                 { label: <FormattedMessage id='matlab' description='matlab' defaultMessage='no data'/>,
                     progress: 65 },
                 { label: <FormattedMessage id='Altiumdesigner' description='Altiumdesigner' defaultMessage='no data'/>,
-                    progress: 65 }
+                    progress: 65 },
+                { label: <FormattedMessage id='vxo' description='vxo' defaultMessage='no data'/>,
+                    progress: 85 },
+                { label: <FormattedMessage id='http' description='http' defaultMessage='no data'/>,
+                    progress: 85 },
+                { label: <FormattedMessage id='git' description='git' defaultMessage='no data'/>,
+                    progress: 90 },
+                { label: <FormattedMessage id='pack' description='pack' defaultMessage='no data'/>,
+                    progress: 80 },
+                { label: <FormattedMessage id='ac' description='ac' defaultMessage='no data'/>,
+                    progress: 85 },
+                { label: <FormattedMessage id='map' description='map' defaultMessage='no data'/>,
+                    progress: 95 },
+                { label: <FormattedMessage id='es' description='es' defaultMessage='no data'/>,
+                    progress: 90 }
             ]
         };
         // This binding is necessary to make `this` work in the callback

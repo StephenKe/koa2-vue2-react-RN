@@ -3,22 +3,19 @@ import '../css/Navigation.css';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import storeData from '../redux/langSwitch';
 import Panel from '../ui/Panel'
-import demo from '../images/demo.png';
 
 class Base extends Component {
     constructor(props) {
         super(props);
         this.state = {
             items: [
-                { label: <FormattedMessage id='degree' description='degree' defaultMessage='no data'/>,
-                  src: demo,
-                  desc: [<FormattedMessage id='degreeDesc' description='degreeDesc' defaultMessage='no data'/>] },
-                { label: <FormattedMessage id='CET4' description='CET4' defaultMessage='no data'/>,
-                  src: demo,
-                  desc: [<FormattedMessage id='CET4desc' description='CET4desc' defaultMessage='no data'/>] },
-                { label: <FormattedMessage id='fan' description='fan' defaultMessage='no data'/>,
-                  src: demo,
-                  desc: [<FormattedMessage id='fanDesc' description='fanDesc' defaultMessage='no data'/>] }
+                { label: <FormattedMessage id='adonging' description='adonging' defaultMessage='no data'/>,
+                  desc: ['2016/12 --',
+                         <FormattedMessage id='adongingDesc1' description='adongingDesc1' defaultMessage='no data'/>,
+                         <FormattedMessage id='adongingDesc2' description='adongingDesc2' defaultMessage='no data'/>,
+                         <FormattedMessage id='adongingDesc3' description='adongingDesc3' defaultMessage='no data'/>],
+                  panel1: 'test',
+                  content1: ['1', '2']}
             ]
         };
         // This binding is necessary to make `this` work in the callback
@@ -28,11 +25,11 @@ class Base extends Component {
             <IntlProvider locale="en" messages={storeData.getState()}>
                 <div>
                     <Panel title={<FormattedMessage
-                        id='certificate'
-                        description='certificate'
+                        id='exp'
+                        description='exp'
                         defaultMessage='no data'
                         />}
-                           style="success"
+                           style="info"
                            layout="Thumbnail"
                            items={this.state.items}>
                     </Panel>

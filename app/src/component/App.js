@@ -9,7 +9,6 @@ import Nav from '../ui/Navigation'
 import Button from '../ui/Button'
 import { Button as Btn, Glyphicon, Modal } from 'react-bootstrap'
 import myRoutes from '../route';
-import bg from '../images/bg.png';
 import {
     BrowserRouter as Router,
     Route
@@ -68,7 +67,7 @@ class App extends Component {
                     <div className="App-body">
                         <div className="bg-container"></div>
                         <Router>
-                            <div>
+                            <div className="route-container">
                                 <Modal
                                     show={this.state.show}
                                     onHide={close}

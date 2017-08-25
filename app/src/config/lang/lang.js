@@ -58,7 +58,27 @@ const zh_CN = {
     chip: '芯片编程',
     c: 'C',
     matlab: 'MATLAB',
-    Altiumdesigner: 'Altiumdesigner'
+    Altiumdesigner: 'Altiumdesigner',
+    vxo: 'visio&xmind&MS office',
+    http: 'HTTP',
+    git: 'git',
+    pack: 'webpack',
+    ac: 'AMD&CMD',
+    map: 'AMap&BMap&TMap&GMap',
+    es: 'ES6&ES7',
+    skills1: '社交技能',
+    en: '英语',
+    Cantonese: '粤语',
+    Chinese: '普通话',
+    com: '表达',
+    lead: '领导力',
+    con: '自信',
+    adonging: '深圳林辰展华科技有限公司',
+    adongingDesc1: 'Web前端工程师',
+    adongingDesc2: '技术氛围: 前网易研发团队,创业团队',
+    adongingDesc3: '业务: 定位器,共享助力车',
+    cyjWechat: '【车友记】微信公众号',
+    cyjService: '【车友记】管理后台'
 }
 
 const en_US = {
@@ -92,6 +112,8 @@ const en_US = {
     mail: 'E-mail',
     mailVal: 'kejianok@126.com',
     certificate: 'Certificate',
+    degree: 'XiangTan University Bachelor Degree',
+    degreeDesc: '2015-06',
     CET4: 'CET4',
     CET4desc: '2012-03',
     fan: 'The 7th \'I CAN\' Cup Internet Things Match',
@@ -118,7 +140,27 @@ const en_US = {
     chip: 'Chip Coding',
     c: 'C',
     matlab: 'MATLAB',
-    Altiumdesigner: 'Altiumdesigner'
+    Altiumdesigner: 'Altiumdesigner',
+    vxo: 'visio&xmind&MS office',
+    http: 'HTTP',
+    git: 'git',
+    pack: 'webpack',
+    ac: 'AMD&CMD',
+    map: 'AMap&BMap&TMap&GMap',
+    es: 'ES6&ES7',
+    skills1: 'Social Skills',
+    en: 'English',
+    Cantonese: 'Cantonese',
+    Chinese: 'Chinese',
+    com: 'Communication',
+    lead: 'Leadership',
+    con: 'Confidence',
+    adonging: 'Adonging.com',
+    adongingDesc1: 'Front-End Engineer',
+    adongingDesc2: 'Env: Pre-Netease develop team,create career team',
+    adongingDesc3: 'Business: locator,sharing electrombile',
+    cyjWechat: 'CYJ Wechat',
+    cyjService: 'CYJ Service'
 }
 
 export {

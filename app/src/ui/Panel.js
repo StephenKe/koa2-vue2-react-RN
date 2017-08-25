@@ -4,17 +4,24 @@
 import React, { Component } from 'react';
 import * as bs from 'react-bootstrap';
 import '../css/Panel.css';
-import demo from '../images/demo.png';
 
 class Panel extends Component {
     constructor(props) {
         super(props);
-
+        this.state = {activeKey: '1'};
         // This binding is necessary to make `this` work in the callback
         this.handleClick = this.handleClick.bind(this);
+        this.handleSelect = this.handleSelect.bind(this);
     };
     handleClick () {
-      this.props.pclick();
+        this.props.pclick();
+    };
+    handleSelect (activeKey) {
+        if (this.state.activeKey === activeKey) {
+            this.setState({ activeKey: '' });
+            return;
+        }
+        this.setState({ activeKey: activeKey });
     };
     render () {
         const layout = this.props.layout;
@@ -27,15 +34,29 @@ class Panel extends Component {
             </bs.InputGroup>
         ));
         map.set('Thumbnail', items.map((item, i) =>
-            <bs.Thumbnail src={demo} alt="242x200" key={i}>
+            <bs.Thumbnail src={item.src} key={i}>
                 <h3>{item.label}</h3>
-                <p>{item.desc}</p>
+                { item.desc && item.desc.map((desc) => <p>{desc}</p>) }
+                {item.panel1 && <bs.PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>
+                    {item.panel1 && <bs.Panel header={item.panel1} eventKey="1">
+                        {item.content1 && <bs.Table striped bordered condensed hover>
+                            <tbody>
+                            <tr>
+                                {item.content1 && item.content1.map((content1) => <label>
+                                    <td>{content1[0]}</td>
+                                    <td>{content1[1]}</td>
+                                </label>)}
+                            </tr>
+                            </tbody>
+                        </bs.Table>}
+                    </bs.Panel>}
+                </bs.PanelGroup>}
             </bs.Thumbnail>
         ));
         map.set('progress', items.map((item, i) =>
             <div key={i}>
                 <h3>{item.label}</h3>
-                <bs.ProgressBar active bsStyle="danger" now={item.progress} />
+                <bs.ProgressBar active bsStyle="danger" now={item.progress} label={`${item.progress}%`} />
             </div>
         ));
         const listItems = map.get(layout);

@@ -67,6 +67,20 @@ class Nav extends Component {
                             defaultMessage='no data'
                         />
                     </Link></NavItem>
+                    <NavItem eventKey={4}><Link to="/skills1">
+                        <FormattedMessage
+                            id='skills1'
+                            description='skills1'
+                            defaultMessage='no data'
+                        />
+                    </Link></NavItem>
+                    <NavItem eventKey={5}><Link to="/exp">
+                        <FormattedMessage
+                            id='exp'
+                            description='exp'
+                            defaultMessage='no data'
+                        />
+                    </Link></NavItem>
                 </Nav1>
             </IntlProvider>
         )

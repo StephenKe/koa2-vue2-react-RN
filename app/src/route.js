@@ -7,6 +7,8 @@ import Zhihu from './component/Zhihu'
 import Base from './component/Base'
 import Certificate from './component/Certificate'
 import Skills from './component/Skills'
+import Skills1 from './component/Skills1'
+import Exp from './component/Exp'
 
 ////////////////////////////////////////////////////////////
 // then our route config
@@ -34,6 +36,14 @@ const myRoutes = [
     {
         path: '/skills',
         component: Skills
+    },
+    {
+        path: '/skills1',
+        component: Skills1
+    },
+    {
+        path: '/exp',
+        component: Exp
     }
 ]
 
