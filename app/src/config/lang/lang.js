@@ -78,7 +78,13 @@ const zh_CN = {
     adongingDesc2: '技术氛围: 前网易研发团队,创业团队',
     adongingDesc3: '业务: 定位器,共享助力车',
     cyjWechat: '【车友记】微信公众号',
-    cyjService: '【车友记】管理后台'
+    cyjService: '【车友记】管理后台',
+    duty: '职责',
+    cyjServiceDuty: 'bug修复,优化,二次开发',
+    tech: '技术',
+    cyjServiceTech: 'vue全家桶/nodeJs/koa/bootstrap/AMap/BMap/GMap/JQuery/ES6/webpack/font-awesome/CSS3/animate/ajax',
+    desc: '描述',
+    cyjServiceDesc: '定位器服务管理后台'
 }
 
 const en_US = {
@@ -160,7 +166,13 @@ const en_US = {
     adongingDesc2: 'Env: Pre-Netease develop team,create career team',
     adongingDesc3: 'Business: locator,sharing electrombile',
     cyjWechat: 'CYJ Wechat',
-    cyjService: 'CYJ Service'
+    cyjService: 'CYJ Service',
+    duty: 'Duty',
+    cyjServiceDuty: 'fix bug,optimization,Add-on functions development',
+    tech: 'Technology',
+    cyjServiceTech: 'vue bucket/nodeJs/koa/bootstrap/AMap/BMap/GMap/JQuery/ES6/webpack/font-awesome/CSS3/animate/ajax',
+    desc: 'Desc',
+    cyjServiceDesc: 'A locator background manage platform'
 }
 
 export {

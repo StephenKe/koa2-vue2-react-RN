@@ -5,3 +5,7 @@
 .panel .input-group .input-group-addon:first-of-type {
   background-color: skyblue;
 }
+
+.panel .td1 {
+  text-align: left;
+}

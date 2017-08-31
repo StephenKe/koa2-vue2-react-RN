@@ -36,17 +36,15 @@ class Panel extends Component {
         map.set('Thumbnail', items.map((item, i) =>
             <bs.Thumbnail src={item.src} key={i}>
                 <h3>{item.label}</h3>
-                { item.desc && item.desc.map((desc) => <p>{desc}</p>) }
+                { item.desc && item.desc.map((desc, i) => <p key={i}>{desc}</p>) }
                 {item.panel1 && <bs.PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>
                     {item.panel1 && <bs.Panel header={item.panel1} eventKey="1">
-                        {item.content1 && <bs.Table striped bordered condensed hover>
+                        {item.content1 && <bs.Table striped bordered condensed hover responsive>
                             <tbody>
-                            <tr>
-                                {item.content1 && item.content1.map((content1) => <label>
-                                    <td>{content1[0]}</td>
-                                    <td>{content1[1]}</td>
-                                </label>)}
-                            </tr>
+                            {item.content1 && item.content1.map((content1, i) => <tr key={i}>
+                                <td>{content1[0]}</td>
+                                <td className="td1">{content1[1]}</td>
+                            </tr>)}
                             </tbody>
                         </bs.Table>}
                     </bs.Panel>}
