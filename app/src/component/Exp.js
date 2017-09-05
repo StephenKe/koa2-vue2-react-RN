@@ -14,11 +14,26 @@ class Base extends Component {
                          <FormattedMessage id='adongingDesc1' description='adongingDesc1' defaultMessage='no data'/>,
                          <FormattedMessage id='adongingDesc2' description='adongingDesc2' defaultMessage='no data'/>,
                          <FormattedMessage id='adongingDesc3' description='adongingDesc3' defaultMessage='no data'/>],
-                  panel1: <label><FormattedMessage id='cyjService' description='cyjService' defaultMessage='no data'/></label>,
-                  content1: [
-                             [<FormattedMessage id='desc' description='desc' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceDesc' description='cyjServiceDesc' defaultMessage='no data'/>],
-                             [<FormattedMessage id='duty' description='duty' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceDuty' description='cyjServiceDuty' defaultMessage='no data'/>],
-                             [<FormattedMessage id='tech' description='tech' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceTech' description='cyjServiceTech' defaultMessage='no data'/>]] }
+                  panelGroup: [{
+                      panel: <label><FormattedMessage id='cyjService' description='cyjService' defaultMessage='no data'/></label>,
+                      content: [
+                          [<FormattedMessage id='desc' description='desc' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceDesc' description='cyjServiceDesc' defaultMessage='no data'/>],
+                          [<FormattedMessage id='duty' description='duty' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceDuty' description='cyjServiceDuty' defaultMessage='no data'/>],
+                          [<FormattedMessage id='tech' description='tech' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceTech' description='cyjServiceTech' defaultMessage='no data'/>]]
+                  }, {
+                      panel: <label><FormattedMessage id='cyjService' description='cyjService' defaultMessage='no data'/></label>,
+                      content: [
+                          [<FormattedMessage id='desc' description='desc' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceDesc' description='cyjServiceDesc' defaultMessage='no data'/>],
+                          [<FormattedMessage id='duty' description='duty' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceDuty' description='cyjServiceDuty' defaultMessage='no data'/>],
+                          [<FormattedMessage id='tech' description='tech' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceTech' description='cyjServiceTech' defaultMessage='no data'/>]]
+                  }, {
+                      panel: <label><FormattedMessage id='cyjService' description='cyjService' defaultMessage='no data'/></label>,
+                      content: [
+                          [<FormattedMessage id='desc' description='desc' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceDesc' description='cyjServiceDesc' defaultMessage='no data'/>],
+                          [<FormattedMessage id='duty' description='duty' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceDuty' description='cyjServiceDuty' defaultMessage='no data'/>],
+                          [<FormattedMessage id='tech' description='tech' defaultMessage='no data'/>, <FormattedMessage id='cyjServiceTech' description='cyjServiceTech' defaultMessage='no data'/>]]
+                  }]
+                }
             ]
         };
         // This binding is necessary to make `this` work in the callback

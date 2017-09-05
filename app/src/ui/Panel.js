@@ -8,7 +8,7 @@ import '../css/Panel.css';
 class Panel extends Component {
     constructor(props) {
         super(props);
-        this.state = {activeKey: '1'};
+        this.state = {activeKey: '0'};
         // This binding is necessary to make `this` work in the callback
         this.handleClick = this.handleClick.bind(this);
         this.handleSelect = this.handleSelect.bind(this);
@@ -27,6 +27,30 @@ class Panel extends Component {
         const layout = this.props.layout;
         const items = this.props.items;
         const map = new Map();
+        const _this = this;
+        let panelGroupArr = [];
+        let handlePanelGroup = function (panelGroups) {
+            for (let j in panelGroups) {
+                panelGroupArr.push(createPanelGroup(panelGroups[j], j));
+                if (Number(j) === panelGroups.length - 1) {
+                    return panelGroupArr.concat();
+                }
+            }
+        };
+        let createPanelGroup = function (panelGroup, j) {
+            return <bs.PanelGroup activeKey={_this.state.activeKey} onSelect={_this.handleSelect} accordion key={j}>
+                <bs.Panel header={panelGroup.panel} eventKey={j}>
+                    <bs.Table striped bordered condensed hover responsive>
+                    <tbody>
+                    {panelGroup.content && panelGroup.content.map((content1, i) => <tr key={i}>
+                    <td>{content1[0]}</td>
+                    <td className="td1">{content1[1]}</td>
+                    </tr>)}
+                    </tbody>
+                    </bs.Table>
+                </bs.Panel>
+            </bs.PanelGroup>
+        };
         map.set('input-group', items.map((item, i) =>
             <bs.InputGroup key={i}>
                 <bs.InputGroup.Addon>{item.key}</bs.InputGroup.Addon>
@@ -37,18 +61,19 @@ class Panel extends Component {
             <bs.Thumbnail src={item.src} key={i}>
                 <h3>{item.label}</h3>
                 { item.desc && item.desc.map((desc, i) => <p key={i}>{desc}</p>) }
-                {item.panel1 && <bs.PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>
-                    {item.panel1 && <bs.Panel header={item.panel1} eventKey="1">
-                        {item.content1 && <bs.Table striped bordered condensed hover responsive>
-                            <tbody>
-                            {item.content1 && item.content1.map((content1, i) => <tr key={i}>
-                                <td>{content1[0]}</td>
-                                <td className="td1">{content1[1]}</td>
-                            </tr>)}
-                            </tbody>
-                        </bs.Table>}
-                    </bs.Panel>}
-                </bs.PanelGroup>}
+                { item.panelGroup && handlePanelGroup(item.panelGroup) }
+                {/*{item.panel1 && <bs.PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>*/}
+                    {/*{item.panel1 && <bs.Panel header={item.panel1} eventKey="1">*/}
+                        {/*{item.content1 && <bs.Table striped bordered condensed hover responsive>*/}
+                            {/*<tbody>*/}
+                            {/*{item.content1 && item.content1.map((content1, i) => <tr key={i}>*/}
+                                {/*<td>{content1[0]}</td>*/}
+                                {/*<td className="td1">{content1[1]}</td>*/}
+                            {/*</tr>)}*/}
+                            {/*</tbody>*/}
+                        {/*</bs.Table>}*/}
+                    {/*</bs.Panel>}*/}
+                {/*</bs.PanelGroup>}*/}
             </bs.Thumbnail>
         ));
         map.set('progress', items.map((item, i) =>
