@@ -28,8 +28,9 @@ class Panel extends Component {
         const items = this.props.items;
         const map = new Map();
         const _this = this;
-        let panelGroupArr = [];
+        let eventKey = -1;
         let handlePanelGroup = function (panelGroups) {
+            let panelGroupArr = [];
             for (let j in panelGroups) {
                 panelGroupArr.push(createPanelGroup(panelGroups[j], j));
                 if (Number(j) === panelGroups.length - 1) {
@@ -39,7 +40,7 @@ class Panel extends Component {
         };
         let createPanelGroup = function (panelGroup, j) {
             return <bs.PanelGroup activeKey={_this.state.activeKey} onSelect={_this.handleSelect} accordion key={j}>
-                <bs.Panel header={panelGroup.panel} eventKey={j}>
+                <bs.Panel header={panelGroup.panel} eventKey={(++eventKey).toString()}>
                     <bs.Table striped bordered condensed hover responsive>
                     <tbody>
                     {panelGroup.content && panelGroup.content.map((content1, i) => <tr key={i}>
