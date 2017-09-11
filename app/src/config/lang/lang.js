@@ -106,7 +106,15 @@ const zh_CN = {
     miaoMobile: '【妙租】移动端',
     miaoMobileDesc: '一个提供写字楼租赁信息的移动端网站',
     miaoMobileDuty: '开发,bug修复,优化',
-    miaoMobileTech: 'JQuery/ajax/CSS3/swiper/BMap'
+    miaoMobileTech: 'JQuery/ajax/CSS3/swiper/BMap',
+    souyun: '湖南搜云网络科技股份有限公司',
+    souyunDesc1: '前端工程师(实习)',
+    souyunDesc2: '业务: 无线互联网服务提供商',
+    souyunPc: '公司主页',
+    souyunPcDesc: '一个公开的公司网站',
+    souyunPcDuty: '熟悉代码,bug修复,迭代',
+    souyunPcTech: 'JQuery/ajax/CSS3',
+    works: '作品'
 }
 
 const en_US = {
@@ -223,7 +231,8 @@ const en_US = {
     souyunPc: 'Company Website',
     souyunPcDesc: 'A public company website',
     souyunPcDuty: 'fix bug,Add-on functions development',
-    souyunPcTech: 'JQuery/ajax/CSS3'
+    souyunPcTech: 'JQuery/ajax/CSS3',
+    works: 'works'
 }
 
 export {

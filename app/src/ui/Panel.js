@@ -23,6 +23,15 @@ class Panel extends Component {
         }
         this.setState({ activeKey: activeKey });
     };
+    headerClick (e) {
+        if (e.target.getAttribute('class')) {
+            let classArr = e.target.getAttribute('class').split(' ');
+            let targetUrl = classArr.find((val) => {
+                return ~val.indexOf('.com') ? val : '';
+            });
+            targetUrl && window.open(targetUrl);
+        }
+    };
     render () {
         const layout = this.props.layout;
         const items = this.props.items;
@@ -40,7 +49,7 @@ class Panel extends Component {
         };
         let createPanelGroup = function (panelGroup, j) {
             return <bs.PanelGroup activeKey={_this.state.activeKey} onSelect={_this.handleSelect} accordion key={j}>
-                <bs.Panel header={panelGroup.panel} eventKey={(++eventKey).toString()}>
+                <bs.Panel onClick={_this.headerClick} header={panelGroup.panel} eventKey={(++eventKey).toString()}>
                     <bs.Table striped bordered condensed hover responsive>
                     <tbody>
                     {panelGroup.content && panelGroup.content.map((content1, i) => <tr key={i}>
@@ -83,6 +92,11 @@ class Panel extends Component {
                 <bs.ProgressBar active bsStyle="danger" now={item.progress} label={`${item.progress}%`} />
             </div>
         ));
+        map.set('Carousel', <bs.Carousel>
+            {items.map((item, i) => <bs.Carousel.Item key={i}>
+                <img className="Carousel-image" src={item}/>
+            </bs.Carousel.Item>)}
+        </bs.Carousel>);
         const listItems = map.get(layout);
         return (
             <div className="Panel">

@@ -15,6 +15,8 @@ function matcher(state, action) {
             return 4;
         case 5:
             return 5;
+        case 6:
+            return 6;
         default:
             return state;
     }

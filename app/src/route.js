@@ -9,6 +9,7 @@ import Certificate from './component/Certificate'
 import Skills from './component/Skills'
 import Skills1 from './component/Skills1'
 import Exp from './component/Exp'
+import Works from './component/Works'
 
 ////////////////////////////////////////////////////////////
 // then our route config
@@ -44,6 +45,10 @@ const myRoutes = [
     {
         path: '/exp',
         component: Exp
+    },
+    {
+        path: '/works',
+        component: Works
     }
 ]
 

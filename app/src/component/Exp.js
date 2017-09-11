@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import '../css/Navigation.css';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import storeData from '../redux/langSwitch';
-import Panel from '../ui/Panel'
+import Panel from '../ui/Panel';
+import * as bs from 'react-bootstrap';
+import '../css/Exp.css';
 
 class Base extends Component {
     constructor(props) {
@@ -45,13 +47,13 @@ class Base extends Component {
                         <FormattedMessage id='miaoDesc1' description='miaoDesc1' defaultMessage='no data'/>,
                         <FormattedMessage id='miaoDesc2' description='miaoDesc2' defaultMessage='no data'/>],
                     panelGroup: [{
-                        panel: <label><FormattedMessage id='miaoPc' description='miaoPc' defaultMessage='no data'/></label>,
+                        panel: <label className="miaoPc"><FormattedMessage id='miaoPc' description='miaoPc' defaultMessage='no data'/><bs.Glyphicon glyph="new-window //www.omiaozu.com" /></label>,
                         content: [
                             [<FormattedMessage id='desc' description='desc' defaultMessage='no data'/>, <FormattedMessage id='miaoPcDesc' description='miaoPcDesc' defaultMessage='no data'/>],
                             [<FormattedMessage id='duty' description='duty' defaultMessage='no data'/>, <FormattedMessage id='miaoPcDuty' description='miaoPcDuty' defaultMessage='no data'/>],
                             [<FormattedMessage id='tech' description='tech' defaultMessage='no data'/>, <FormattedMessage id='miaoPcTech' description='miaoPcTech' defaultMessage='no data'/>]]
                     }, {
-                        panel: <label><FormattedMessage id='miaoMobile' description='miaoMobile' defaultMessage='no data'/></label>,
+                        panel: <label><FormattedMessage id='miaoMobile' description='miaoMobile' defaultMessage='no data'/><bs.Glyphicon glyph="new-window //m.omiaozu.com" /></label>,
                         content: [
                             [<FormattedMessage id='desc' description='desc' defaultMessage='no data'/>, <FormattedMessage id='miaoMobileDesc' description='miaoMobileDesc' defaultMessage='no data'/>],
                             [<FormattedMessage id='duty' description='duty' defaultMessage='no data'/>, <FormattedMessage id='miaoMobileDuty' description='miaoMobileDuty' defaultMessage='no data'/>],
@@ -63,7 +65,7 @@ class Base extends Component {
                         <FormattedMessage id='souyunDesc1' description='souyunDesc1' defaultMessage='no data'/>,
                         <FormattedMessage id='souyunDesc2' description='souyunDesc2' defaultMessage='no data'/>],
                     panelGroup: [{
-                        panel: <label><FormattedMessage id='souyunPc' description='souyunPc' defaultMessage='no data'/></label>,
+                        panel: <label><FormattedMessage id='souyunPc' description='souyunPc' defaultMessage='no data'/><bs.Glyphicon glyph="new-window //www.seud.com.cn" /></label>,
                         content: [
                             [<FormattedMessage id='desc' description='desc' defaultMessage='no data'/>, <FormattedMessage id='souyunPcDesc' description='souyunPcDesc' defaultMessage='no data'/>],
                             [<FormattedMessage id='duty' description='duty' defaultMessage='no data'/>, <FormattedMessage id='souyunPcDuty' description='souyunPcDuty' defaultMessage='no data'/>],
