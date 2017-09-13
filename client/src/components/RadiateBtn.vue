@@ -112,10 +112,10 @@ export default {
   /* 保持大小不变的小圆圈  */
   .dot {
     position: absolute;
-    width: 6px;
-    height: 6px;
-    left: 15px;
-    top: 15px;
+    width: 12px;
+    height: 12px;
+    left: 24px;
+    top: 24px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border: 2px solid red;
@@ -125,8 +125,8 @@ export default {
   /* 产生动画（向外扩散变大）的圆圈  */
   .pulse {
     position: absolute;
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
     left: 2px;
     top: 2px;
     border: 6px solid red;
