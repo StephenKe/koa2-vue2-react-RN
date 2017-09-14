@@ -83,6 +83,9 @@
   opacity: .9;
 }
 
+.download-btn {
+  margin-right: 20px;
+}
 /*.App-body .bg-container .bg {*/
   /*width: 100%;*/
   /*position: absolute;*/

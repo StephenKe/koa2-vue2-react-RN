@@ -26,22 +26,28 @@ const RouteWithSubRoutes = (route) => (
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {show: false, email: 'test', buttonContent: '中文', lang: en_US};
+        this.state = {show: false, download: false, email: 'test', myResume: 'MY RESUME', buttonContent: '中文', lang: en_US};
 
         // This binding is necessary to make `this` work in the callback
         this.openModal = this.openModal.bind(this);
+        this.openDownload = this.openDownload.bind(this);
         this.langSwitch = this.langSwitch.bind(this);
     };
     openModal () {
         this.setState({ show: true});
     };
+    openDownload () {
+        this.setState({ download: true});
+    };
     langSwitch () {
         storeData.dispatch({ type: this.state.buttonContent });
         this.setState({ buttonContent: this.state.buttonContent === 'English' ? '中文' : 'English' });
         this.setState({ lang: this.state.buttonContent === 'English' ? en_US : zh_CN });
+        this.setState({ myResume: this.state.myResume === 'MY RESUME' ? '我的简历' : 'MY RESUME' });
     };
     render() {
         let close = () => this.setState({ show: false});
+        let closeDownload = () => this.setState({ download: false});
         return (
             <IntlProvider locale="en" messages={this.state.lang}>
                 <div className="App">
@@ -53,7 +59,7 @@ class App extends Component {
                                 defaultMessage='no data'
                             />
                         </p>
-                        <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
+                        <img src={logo} className="App-logo" alt="logo" onClick={ this.openDownload }/>
                         <p className="title">
                             <FormattedMessage
                                 id='title'
@@ -66,6 +72,18 @@ class App extends Component {
                     </div>
                     <div className="App-body">
                         <div className="bg-container"></div>
+                        <Modal
+                            show={this.state.download}
+                            onHide={closeDownload}
+                            container={this}
+                            aria-labelledby="contained-modal-title"
+                        >
+                            <Modal.Body>
+                                <div>{this.state.myResume}</div>
+                                <a href="" className="download-btn"><Btn>中文<Glyphicon glyph="download" /></Btn></a>
+                                <a href=""><Btn>English<Glyphicon glyph="download" /></Btn></a>
+                            </Modal.Body>
+                        </Modal>
                         <Router>
                             <div className="route-container">
                                 <Modal
