@@ -61,14 +61,14 @@ export default {
           .$http
           .get('/api/password/' + val.value)
           .then(function (res) {
+            console.log(res.data)
             if (!res.data) {
               this.$message({
                 type: 'info',
                 message: this.$t('base.password') + ' ' + this.$t('base.err')
               })
             } else {
-              window.location.href = 'https://www.baidu.com'
-//              window.open('https://www.baidu.com')
+              window.document.write(res.data)
             }
           })
           .catch(function (err) {
