@@ -34,7 +34,7 @@ new Vue({
   i18n,
   template: `<div>
                 <el-button v-show="pathName" type="primary" class="home" @click="home">H</el-button>
-                <transition name="fade">
+                <transition name="bounce">
                     <router-view class="view"></router-view>
                 </transition>
             </div>`,
