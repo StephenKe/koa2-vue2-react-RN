@@ -61,7 +61,6 @@ export default {
           .$http
           .get('/api/password/' + val.value)
           .then(function (res) {
-            console.log(res.data)
             if (!res.data) {
               this.$message({
                 type: 'info',

@@ -29,7 +29,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.title)
+    // console.log(this.title)
   },
   methods: {
     clickHandler (val) {
