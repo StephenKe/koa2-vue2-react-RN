@@ -82,7 +82,7 @@ router
         let req = ctx.request.url;
         let reqPassword = req.slice(req.lastIndexOf('/') + 1);
         if (reqPassword == password) {
-          // app.use(serve({rootDir: __dirname + '/app/build/static', maxage: 30 * 24 * 60 * 60 * 1000, gzip: true, rootPath: '/static'}));
+          app.use(serve({rootDir: __dirname + '/app/build/static', maxage: 30 * 24 * 60 * 60 * 1000, gzip: true, rootPath: '/static'}));
           let appPath = process.env.NODE_ENV === 'development'? '/app/public/index.html' : '/app/build/index.html';
           let appHtml = fs.readFileSync(__dirname + appPath);
           ctx.body = appHtml.toString();
