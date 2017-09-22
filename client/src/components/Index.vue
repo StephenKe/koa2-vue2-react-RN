@@ -7,7 +7,7 @@
       <a href="https://github.com/StephenKe" target="_blank"><img src="../assets/images/github.png" alt=""></a>
       <a href="https://www.zhihu.com/people/ke-jian-yi/activities" target="_blank"><img src="../assets/images/zhihu.png" alt=""></a>
       <a href="http://www.jianshu.com/u/e6069e7a25a5" target="_blank"><img src="../assets/images/jianshu.png" alt=""></a>
-      <a href="#"><img src="../assets/images/facebook.png" alt=""></a>
+      <a href="https://www.facebook.com/stephen.kate.798" target="_blank"><img src="../assets/images/facebook.png" alt=""></a>
     </div>
     <el-button class="lang-switch" type="primary" @click="langSwitch">{{ $t("index.lang") }}</el-button>
     <img style="display: block;width: 350px;margin: 100px auto" src="../assets/q.png" class="logo">
@@ -182,6 +182,9 @@ a {
   }
   .link img {
     width: 20px;
+  }
+  .link a {
+    display: inline-block;
     margin: 0 10px;
   }
 </style>
