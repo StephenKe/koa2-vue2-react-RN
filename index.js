@@ -56,21 +56,21 @@ router
         let homeHtml = fs.readFileSync(__dirname + homePath);
         ctx.body = homeHtml.toString();
     })
-    .get('/api/text', function (ctx, next) {
-        ctx.body = mock.text;
-    })
-    .get('/api/email', function (ctx, next) {
-        ctx.body = mock.email;
-    })
-    .get('/api/color', function (ctx, next) {
-        ctx.body = mock.color;
-    })
-    .get('/api/name', function (ctx, next) {
-        ctx.body = mock.name;
-    })
-    .get('/api/image', function (ctx, next) {
-        ctx.body = mock.image;
-    })
+    // .get('/api/text', function (ctx, next) {
+    //     ctx.body = mock.text;
+    // })
+    // .get('/api/email', function (ctx, next) {
+    //     ctx.body = mock.email;
+    // })
+    // .get('/api/color', function (ctx, next) {
+    //     ctx.body = mock.color;
+    // })
+    // .get('/api/name', function (ctx, next) {
+    //     ctx.body = mock.name;
+    // })
+    // .get('/api/image', function (ctx, next) {
+    //     ctx.body = mock.image;
+    // })
     .get('/api/daddy/:id', function (ctx, next) {
         let req = ctx.request.url;
         let reqPassword = req.slice(req.lastIndexOf('/') + 1);
