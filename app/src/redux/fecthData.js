@@ -4,11 +4,13 @@
 import { createStore } from 'redux';
 import $ from 'jquery';
 
+let reqUrl = window.location.port === 80 ? '119.23.255.54:80' : 'http://localhost:8002';
+
 function router(state = 'initialData', action) {
     switch (action.type) {
         default:
             $.ajax({
-                url: 'http://localhost:8002' + action.type,
+                url: reqUrl + action.type,
                 dataType: 'json',
                 async: false,
                 cache: false,
