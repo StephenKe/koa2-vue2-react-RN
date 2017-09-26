@@ -4,7 +4,7 @@
 import { createStore } from 'redux';
 import $ from 'jquery';
 
-let reqUrl = window.location.port === 80 ? '119.23.255.54:80' : 'http://localhost:8002';
+let reqUrl = Number(window.location.port) === 80 ? '119.23.255.54:80' : 'http://localhost:8002';
 
 function router(state = 'initialData', action) {
     switch (action.type) {
