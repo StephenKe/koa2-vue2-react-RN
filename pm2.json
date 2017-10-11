@@ -4,7 +4,7 @@
             "name": "Stephen",
             "script": "index.js",
             "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
-            "error_file": "log/admin-error.log",
+            "error_file": "log/admin-error-0.log",
             "node_args": "--harmony",
             "min_uptime": "30s",
             "max_memory_restart": "1G",
