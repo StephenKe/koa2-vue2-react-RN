@@ -60,8 +60,12 @@ new Vue({
   mounted () {
     const phoneAgents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod']
     this.$nextTick(() => {
-      this.phoneHeight = !~phoneAgents.indexOf(window.navigator.userAgent) ? 0 : window.screen.height
       window.alert(window.navigator.userAgent)
+      for (let x in phoneAgents) {
+        if (~window.navigator.userAgent.indexOf(phoneAgents[x])) {
+          this.phoneHeight = window.screen.height
+        }
+      }
     })
     if (this.$route.path === '/') {
       this.pathName = false
