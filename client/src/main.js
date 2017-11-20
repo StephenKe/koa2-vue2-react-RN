@@ -8,13 +8,13 @@ import 'element-ui/lib/theme-default/index.css'
 import VueI18n from 'vue-i18n'
 import * as lang from './assets/lang/lang'
 import methos from './config/methods'
-import vueBetterScroll from 'vue2-better-scroll'
+import BScroll from 'better-scroll'
+
 const langs = ['zh', 'en']
 
 // console.log(Vue.http)
 Vue.use(VueResource)
 Vue.use(elementUI)
-Vue.use(vueBetterScroll)
 
 // lang-config
 if (!window.sessionStorage.lang) {
@@ -34,19 +34,16 @@ Vue.use(methos)
 new Vue({
   router,
   i18n,
-  template: `<div><vue-better-scroll
-                :style="height: ${this.phoneHeight}px"
-                :startY="0"
-              <div>
-                  <el-button v-show="pathName" type="primary" class="home" @click="home">H</el-button>
-                  <transition name="bounce">
-                      <router-view class="view"></router-view>
-                  </transition>
-              </div>
-            </vue-better-scroll></div>`,
+  template: `<div>
+                  <div ref="wrapper">
+                      <el-button v-show="pathName" type="primary" class="home" @click="home">H</el-button>
+                      <transition name="bounce">
+                          <router-view class="view"></router-view>
+                      </transition>
+                  </div>
+              </div>`,
   data: {
-    pathName: true,
-    phoneHeight: 0
+    pathName: true
   },
   watch: {
     '$route' (val) {
@@ -60,10 +57,12 @@ new Vue({
   mounted () {
     const phoneAgents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod']
     this.$nextTick(() => {
+      this.scroll = new BScroll(this.$refs.wrapper, {})
       for (let x in phoneAgents) {
         if (~window.navigator.userAgent.indexOf(phoneAgents[x])) {
-          this.phoneHeight = window.screen.height
-          window.alert(window.screen.height)
+          window.alert(window.innerHeight)
+          this.$refs.wrapper.style.height = window.innerHeight
+          this.scroll = new BScroll(this.$refs.wrapper, {})
         }
       }
     })
