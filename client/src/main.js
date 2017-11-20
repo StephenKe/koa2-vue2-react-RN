@@ -60,10 +60,10 @@ new Vue({
   mounted () {
     const phoneAgents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod']
     this.$nextTick(() => {
-      window.alert(window.navigator.userAgent)
       for (let x in phoneAgents) {
         if (~window.navigator.userAgent.indexOf(phoneAgents[x])) {
           this.phoneHeight = window.screen.height
+          window.alert(window.screen.height)
         }
       }
     })
