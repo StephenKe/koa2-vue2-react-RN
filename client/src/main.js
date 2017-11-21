@@ -35,7 +35,7 @@ new Vue({
   router,
   i18n,
   template: `<div>
-                  <div ref="wrapper">
+                  <div ref="wrapper" style="height: ${window.innerHeight}px;width: ${window.innerWidth}px">
                       <el-button v-show="pathName" type="primary" class="home" @click="home">H</el-button>
                       <transition name="bounce">
                           <router-view class="view"></router-view>
@@ -60,7 +60,7 @@ new Vue({
       this.scroll = new BScroll(this.$refs.wrapper, {})
       for (let x in phoneAgents) {
         if (~window.navigator.userAgent.indexOf(phoneAgents[x])) {
-          window.alert(window.innerHeight)
+          window.alert(window.innerHeight, window.innerWidth)
           this.$refs.wrapper.style.height = window.innerHeight
           this.scroll = new BScroll(this.$refs.wrapper, {
             click: true
