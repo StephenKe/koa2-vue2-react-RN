@@ -61,7 +61,8 @@ new Vue({
         if (~window.navigator.userAgent.indexOf(phoneAgents[x])) {
           this.$refs.wrapper.style.height = window.innerHeight
           this.scroll = new BScroll(this.$refs.wrapper, {
-            click: true
+            click: true,
+            eventPassthrough: 'vertical'
           })
         }
       }
