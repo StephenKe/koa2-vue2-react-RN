@@ -55,12 +55,10 @@ new Vue({
     }
   },
   mounted () {
-    const phoneAgents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod']
+    const phoneAgents = ['Android', 'iPhone', 'SymbianOS', 'Windows Phone', 'iPad', 'iPod', 'Debug kjy']
     this.$nextTick(() => {
-      this.scroll = new BScroll(this.$refs.wrapper, {})
       for (let x in phoneAgents) {
         if (~window.navigator.userAgent.indexOf(phoneAgents[x])) {
-          window.alert(window.innerHeight, window.innerWidth)
           this.$refs.wrapper.style.height = window.innerHeight
           this.scroll = new BScroll(this.$refs.wrapper, {
             click: true
