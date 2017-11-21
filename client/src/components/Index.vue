@@ -35,6 +35,10 @@
         <!--<li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>-->
       <!--</ul>-->
     <!--</div>-->
+    <footer class="footer">
+      <div>友情链接:&nbsp;<a href="https://www.withyoufriends.com/#/">Haowen</a></div>
+      <div>粤ICP备17146050号</div>
+    </footer>
   </div>
 </template>
 
@@ -164,6 +168,11 @@ a {
   position: absolute;
   top: 3%;
   left: 75%;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 </style>
 <style>
