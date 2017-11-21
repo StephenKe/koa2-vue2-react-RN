@@ -66,9 +66,8 @@ new Vue({
       for (let x in phoneAgents) {
         if (~window.navigator.userAgent.indexOf(phoneAgents[x])) {
           this.scroll = new BScroll(this.$refs.wrapper, {
-            scrollY: true,
             click: true
-            // eventPassthrough: 'vertical'
+            eventPassthrough: 'vertical'
           })
         }
       }
