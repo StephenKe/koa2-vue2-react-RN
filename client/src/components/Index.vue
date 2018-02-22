@@ -36,7 +36,7 @@
       <!--</ul>-->
     <!--</div>-->
     <footer class="footer">
-      <div>友情链接:&nbsp;<a href="https://www.withyoufriends.com/#/" target="_blank">Haowen</a></div>
+      <div>友情链接:&nbsp;<a href="https://www.withyoufriends.com/#/" target="_blank">Haowen</a>&nbsp;<a href="http://www.justsoso.me/" target="_blank">JD</a></div>
       <div>粤ICP备17146050号</div>
     </footer>
   </div>

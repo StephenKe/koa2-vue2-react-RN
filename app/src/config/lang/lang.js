@@ -114,7 +114,9 @@ const zh_CN = {
     souyunPcDesc: '一个公开的公司网站',
     souyunPcDuty: '熟悉代码,bug修复,迭代',
     souyunPcTech: 'JQuery/ajax/CSS3',
-    works: '作品'
+    works: '作品',
+    degree: '湘潭大学学士学位',
+    degreeDesc: '2015-06'
 }
 
 const en_US = {

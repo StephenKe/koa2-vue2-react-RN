@@ -8,12 +8,14 @@ import YDCXwechat from '../images/YDCX-wechat.png';
 import miaozuPC from '../images/miaozu-PC.png';
 import miaozuMobile from '../images/miaozu-mobile.png';
 import souyun from '../images/souyun.png';
+import CYJapp from '../images/CYJ-app.png';
+import CYJwemini from '../images/CYJ-wemini.png';
 
 class Base extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: [CYJservice, CYJwechat, YDCXservice, YDCXwechat, miaozuPC, miaozuMobile, souyun]
+            items: [CYJservice, CYJwechat, CYJwemini, CYJapp, YDCXservice, YDCXwechat, miaozuPC, miaozuMobile, souyun]
         };
         // This binding is necessary to make `this` work in the callback
     };
